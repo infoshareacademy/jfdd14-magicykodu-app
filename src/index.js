@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Topbar from '../src/components/Topbar/Topbar';
+import Sidebar from '../src/components/Sidebar/Sidebar';
+import Home from '../src/pages/Home/Home';
+import EventList from '../src/pages/EventList/EventList';
+import Default from '../src/pages/Default/Default'
+import './index.css';
 import * as serviceWorker from './serviceWorker';
-
-import { BrowserRouter, Switch, Route } from'react-router-dom';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -11,6 +15,8 @@ ReactDOM.render(
         <Sidebar/>
         <Switch>      
             <Route exact path='/' component={Home} />
+            <Route path='/lista-wydarzen' component={EventList} />
+            <Route component={Default} />
         </Switch>  
     </BrowserRouter>, 
     document.getElementById('root')
