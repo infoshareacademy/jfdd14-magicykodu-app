@@ -8,6 +8,7 @@ import EventList from '../src/pages/EventList/EventList';
 import Default from '../src/pages/Default/Default'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css';
 
 ReactDOM.render(
     <BrowserRouter>

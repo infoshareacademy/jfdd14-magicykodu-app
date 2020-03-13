@@ -5,7 +5,7 @@ class Sidebar extends Component{
     render(){
         return (
             <nav>
-                <Link to="/home">Home</Link>
+                <Link to="/">Home</Link>
                 <br></br>
                 <Link to="/lista-wydarzen">Lista wydarzeń</Link>
             </nav>

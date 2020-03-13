@@ -1,0 +1,9 @@
+.topbar{
+    margin: 0 auto;
+    padding: 10px 0;
+    height: auto;
+    color: #fff;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+}
