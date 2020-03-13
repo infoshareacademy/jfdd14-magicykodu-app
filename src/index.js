@@ -8,11 +8,15 @@ import EventList from '../src/pages/EventList/EventList';
 import Default from '../src/pages/Default/Default'
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import List from '../src/components/List/List'
+import 'semantic-ui-css/semantic.min.css';
+
 
 ReactDOM.render(
     <BrowserRouter>
         <Topbar/>
         <Sidebar/>
+        <List />
         <Switch>      
             <Route exact path='/' component={Home} />
             <Route path='/lista-wydarzen' component={EventList} />
