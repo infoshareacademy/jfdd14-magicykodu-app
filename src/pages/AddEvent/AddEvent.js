@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 
-class EventList extends Component {
+class AddEvent extends Component {
     render() {
         return (
             <div>
-                Lista
+                Dodaj własne wydarzenie - Formularz
             </div>
         )
     }
 }
 
-export default EventList;
+export default AddEvent;

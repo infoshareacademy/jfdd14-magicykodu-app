@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 
-class EventList extends Component {
+class Favorite extends Component {
     render() {
         return (
             <div>
-                Lista
+                Ulubione wydarzenia ♥ 
             </div>
         )
     }
 }
 
-export default EventList;
+export default Favorite;
