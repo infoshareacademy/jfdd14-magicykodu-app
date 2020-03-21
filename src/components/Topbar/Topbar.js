@@ -1,25 +1,13 @@
-import React, {Component} from 'react';
-import { Button } from 'semantic-ui-react';
+import React, {Component} from 'react'
 // import './Topbar.css';
-import { Menu, Header, Segment } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react'
+import Logo from '../Logo/Logo'
 
-// class Topbar extends Component{
-
-//     render(){
-//         return (
-//             <div className="topbar">
-//                 <h2>Planner 4 Runner</h2>
-//                 <Button className="button" color="green">Log out</Button>
-//             </div>
-            
-//         )
-//     }
-// }
-
-// export default Topbar;
 
 export default class Topbar extends Component {
-    state = { activeItem: 'home' }
+    state = { 
+      activeItem: 'home' 
+    }
   
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   
@@ -29,14 +17,13 @@ export default class Topbar extends Component {
       return (
         <Segment inverted>
           <Menu inverted secondary>
-          <Header inverted as='h3'>Third Header</Header>
+            <Logo />
             <Menu.Item
-            position='right'
-              name='home'
+              position='right'
+              name='Log out'
               active={activeItem === 'home'}
               onClick={this.handleItemClick}
             />
-
           </Menu>
         </Segment>
       )
