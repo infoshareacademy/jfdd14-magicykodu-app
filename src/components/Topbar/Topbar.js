@@ -15,7 +15,7 @@ export default class Topbar extends Component {
       const { activeItem } = this.state
   
       return (
-        <Segment inverted>
+        <Segment inverted style={{margin: '0px'}}>
           <Menu inverted secondary>
             <Logo />
             <Menu.Item
