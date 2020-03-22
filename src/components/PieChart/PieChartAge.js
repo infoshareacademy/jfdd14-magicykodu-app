@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { PieChart, Pie, Sector, Cell, Tooltip, Legend } from 'recharts'
+import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts'
 
 const data = [
   { name: 'poniżej 18 roku życia', value: 3890 },
