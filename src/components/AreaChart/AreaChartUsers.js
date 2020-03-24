@@ -1,63 +1,47 @@
 import React, { PureComponent } from 'react'
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 const data = [
   {
-    name: 'Styczeń', uv: 100, 
+    name: 'Styczeń', uv: 894, 
   },
   {
-    name: 'Luty', uv: 151, 
+    name: 'Luty', uv: 409, 
   },
   {
-    name: 'Marzec', uv: 198, 
+    name: 'Marzec', uv: 743, 
   },
   {
     name: 'Kwiecień', uv: 257, 
   },
-  {
-    name: 'Maj', uv: 440, 
-  },
-  {
-    name: 'Czerwiec', uv: 690, 
-  },
-  {
-    name: 'Lipiec', uv: 400, 
-  },
-  {
-    name: 'Sierpień', uv: 203, 
-  },
-  {
-    name: 'Wrzesień', uv: 489, 
-  },
-  {
-    name: 'Październik', uv: 381, 
-  },
-  {
-    name: 'Listopad', uv: 209, 
-  },
-  {
-    name: 'Grudzień', uv: 189, 
-  },
 ];
+
+const chartStyle = {
+  boxShadow: "1px 1px 5px 1px #999999",
+  backgroundColor: "#fff",
+  borderRadius: "5px"
+}
 
 export default class AreaChartUsers extends PureComponent {
 
   render() {
     return (
-      <AreaChart
-        width={900}
-        height={400}
+      <ResponsiveContainer width={'99%'} height={400}>
+        <AreaChart style={chartStyle}
+        width={850}
         data={data}
         margin={{
           top: 10, right: 30, left: 0, bottom: 0,
         }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Area type='natural' dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Area type='natural' dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
+      </ResponsiveContainer>   
     );
   }
 }
+
