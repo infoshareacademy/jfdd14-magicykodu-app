@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts'
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 const data = [
   { name: 'poniżej 18 roku życia', value: 3890 },
@@ -10,29 +10,38 @@ const data = [
 ];
 const COLORS = ['#28bb76', '#8884d8', '#8884d', '#999999', '#006699'];
 
-
+const chartStyle = {
+  boxShadow: "1px 1px 5px 1px #999999",
+  backgroundColor: "#fff",
+  borderRadius: "5px",
+}
 export default class PieChartAge extends PureComponent {
   
   render() {
     return (
-      <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
-        <Pie
-          data={data}
-          cx={120}
-          cy={200}
-          innerRadius={60}
-          outerRadius={80}
-          fill="#8884d8"
-          paddingAngle={5}
-          dataKey="value"
-        >
-          {
-            data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
-          }
-        </Pie>
-        <Tooltip />
-        <Legend />
-      </PieChart>
+      <ResponsiveContainer width={'99%'} height={400}>
+        <PieChart width={800} onMouseEnter={this.onPieEnter} style={chartStyle} > 
+          <Pie
+            data={data}
+            cx="50%" 
+            cy="50%" 
+            innerRadius="45%"
+            outerRadius="60%"
+            fill="#8884d8"
+            paddingAngle={3}
+            dataKey="value">
+            {
+              data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+            }
+          </Pie>
+          <Tooltip />
+          <Legend 
+            verticalAlign="bottom" 
+            align="center"
+            iconType="circle" style={{paddingRight: "20px"}}/>
+        </PieChart>
+      </ResponsiveContainer>  
     );
   }
 }
+
