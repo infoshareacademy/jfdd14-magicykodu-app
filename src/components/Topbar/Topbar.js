@@ -25,15 +25,13 @@ export default class Topbar extends Component {
           <Segment inverted>
             <Menu inverted secondary>
               <Menu.Item 
-                  
                   icon="bars"
                   active
                   onClick={this.changeMenuVisibility} />
               <Menu.Item className='logo__item'>
                 <Logo 
                 position='left'/>
-              </Menu.Item  >
-              
+              </Menu.Item  >    
               <Menu.Item
                 position='right'
                 name='Log out'
@@ -41,7 +39,7 @@ export default class Topbar extends Component {
                 onClick={this.handleItemClick} />
             </Menu>
           </Segment>
-          <MySidebar visibility={menuVisible} />
+          <MySidebar visibility={menuVisible}/>
         </div>  
       )
     }
