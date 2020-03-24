@@ -8,25 +8,21 @@ const data = [
   { name: '40-50 lat', value: 1312 },
   { name: 'powyżej 50 roku życia', value: 418 },
 ];
+
 const COLORS = ['#28bb76', '#8884d8', '#8884d', '#999999', '#006699'];
 
-const chartStyle = {
-  boxShadow: "1px 1px 5px 1px #999999",
-  backgroundColor: "#fff",
-  borderRadius: "5px",
-}
 export default class PieChartAge extends PureComponent {
   
   render() {
     return (
       <ResponsiveContainer width={'99%'} height={400}>
-        <PieChart width={800} onMouseEnter={this.onPieEnter} style={chartStyle} > 
+        <PieChart width={800} onMouseEnter={this.onPieEnter} > 
           <Pie
             data={data}
             cx="50%" 
-            cy="50%" 
-            innerRadius="45%"
-            outerRadius="60%"
+            cy="45%" 
+            innerRadius="50%"
+            outerRadius="65%"
             fill="#8884d8"
             paddingAngle={3}
             dataKey="value">
@@ -38,7 +34,7 @@ export default class PieChartAge extends PureComponent {
           <Legend 
             verticalAlign="bottom" 
             align="center"
-            iconType="circle" style={{paddingRight: "20px"}}/>
+            iconType="circle"/>
         </PieChart>
       </ResponsiveContainer>  
     );

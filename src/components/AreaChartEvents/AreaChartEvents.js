@@ -16,18 +16,12 @@ const data = [
   },
 ];
 
-const chartStyle = {
-  boxShadow: "1px 1px 5px 1px #999999",
-  backgroundColor: "#fff",
-  borderRadius: "5px",
-}
-
 export default class AreaChartUsers extends PureComponent {
 
   render() {
     return (
       <ResponsiveContainer width={'99%'} height={400}>
-        <AreaChart style={chartStyle}
+        <AreaChart
         width={850}
         data={data}
         margin={{
