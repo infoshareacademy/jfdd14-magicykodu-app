@@ -15,8 +15,6 @@ export default class Topbar extends Component {
       })
     }
   
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  
     render() {
       const { menuVisible } = this.state
 

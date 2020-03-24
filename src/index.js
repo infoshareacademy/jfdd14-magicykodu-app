@@ -21,7 +21,6 @@ ReactDOM.render(
                 <Route path='/ulubione' component={Favorite} />
                 <Route component={Default} />
             </Switch>    
-        </div>
-               
+        </div>           
     </BrowserRouter>, document.getElementById('root')
 );
