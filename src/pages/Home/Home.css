@@ -5,3 +5,19 @@
     align-items: center;
 }
 
+.grid{
+    margin: 0 !important;
+}
+
+.ui.grid>.row>.column{
+    box-shadow: 1px 1px 5px 1px #999999;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 15px !important
+}
+
+.home__heading{
+    text-align: center;
+    margin: 20px auto
+}
