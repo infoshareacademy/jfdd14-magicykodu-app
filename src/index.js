@@ -13,12 +13,15 @@ import 'semantic-ui-css/semantic.min.css'
 ReactDOM.render(
     <BrowserRouter>
         <Topbar/>
-        <Switch>      
-            <Route exact path='/' component={Home} />
-            <Route path='/lista-wydarzen' component={EventList} />
-            <Route path='/stworz-wlasne-wydarzenie' component={AddEvent} />
-            <Route path='/ulubione' component={Favorite} />
-            <Route component={Default} />
-        </Switch>           
+        <div className="container">
+            <Switch>      
+                <Route exact path='/' component={Home} />
+                <Route path='/lista-wydarzen' component={EventList} />
+                <Route path='/stworz-wlasne-wydarzenie' component={AddEvent} />
+                <Route path='/ulubione' component={Favorite} />
+                <Route component={Default} />
+            </Switch>    
+        </div>
+               
     </BrowserRouter>, document.getElementById('root')
 );

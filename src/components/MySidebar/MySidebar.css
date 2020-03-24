@@ -1,4 +1,5 @@
 .sidebar{
-    top: 68px !important
+    padding-top: 68px;
+    z-index: 0;
 }
 

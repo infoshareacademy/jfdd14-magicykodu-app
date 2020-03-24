@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Icon, Sidebar} from 'semantic-ui-react'
+import { Menu, Icon, Sidebar } from 'semantic-ui-react'
 import './MySidebar.css'
 
 export default class MySidebar extends Component{
     
     render(){
         const visibility = this.props.visibility
-        
+
         const sidebarStyle = {
             minHeight: '100vh',
             borderRadius: 0,
@@ -15,7 +15,7 @@ export default class MySidebar extends Component{
             backgroundColor: "#28bb76",
             marginTop: "40px"
         };
-        
+
         return (
             <Sidebar style={sidebarStyle} 
             as={Menu}
@@ -40,7 +40,7 @@ export default class MySidebar extends Component{
                 <Menu.Item as={ Link } to="/ulubione" style={{fontWeight: "400", color: "#1e1e1e"}}>      
                     <Icon name='heart' />
                     Ulubione
-                </Menu.Item>
+                </Menu.Item>      
             </Sidebar>      
         )
     }
