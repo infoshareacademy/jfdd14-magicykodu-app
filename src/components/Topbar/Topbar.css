@@ -1,9 +1,8 @@
-.topbar{
-    margin: 0 auto;
-    padding: 10px 0;
-    height: auto;
-    color: #fff;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: space-between;
+.segment{
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.logo__item{
+    padding: 0px 13px !important;
 }
