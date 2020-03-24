@@ -1,0 +1,7 @@
+.item{
+    display: flex !important;
+    justify-content: space-between;
+    text-align: right;
+    align-items: center;
+}
+
