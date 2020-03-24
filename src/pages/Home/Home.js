@@ -30,7 +30,7 @@ const data = [
 export default class Home extends Component {
     render() {
         const appData = data.map(item => 
-            <Grid.Column key={item.id} width={3} style={itemStyle}>
+            <Grid.Column key={item.id} mobile={12} tablet={6} computer={3} style={itemStyle}>
                 <Item verticalAlign='middle'>
                     <Icon style={{color:item.color}} name={item.icon} size='huge'/>
                     <Item.Content>
@@ -49,11 +49,11 @@ export default class Home extends Component {
                     {appData}
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={6}>
+                    <Grid.Column mobile={13} tablet={13} computer={6}>
                         <h3 style={headerStyle}>Przeprowadzone imprezy 2020</h3>
                         <AreaChartUsers />
                     </Grid.Column>
-                    <Grid.Column width={6}>
+                    <Grid.Column mobile={13} tablet={13} computer={6}>
                         <h3 style={headerStyle}>Wiek użytkowników</h3>
                         <PieChartAge />
                     </Grid.Column>
