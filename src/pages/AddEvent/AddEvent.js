@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import AddEventForm from '../../components/AddEventForm/AddEventForm'
 
 class AddEvent extends Component {
     render() {
         return (
             <div>
-                Dodaj własne wydarzenie - Formularz
+               <AddEventForm />
             </div>
         )
     }
