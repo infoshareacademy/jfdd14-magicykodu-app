@@ -13,14 +13,14 @@ export default class App extends Component {
             <BrowserRouter>
                 <Topbar/>
                 <div className="container">
-                    <Switch>      
+                    <Switch>
                         <Route exact path='/' component={Home} />
                         <Route path='/lista-wydarzen' component={EventList} />
                         <Route path='/stworz-wlasne-wydarzenie' component={AddEvent} />
                         <Route path='/ulubione' component={Favorite} />
                         <Route component={Default} />
-                    </Switch>    
-                </div>           
+                    </Switch>
+                </div>
             </BrowserRouter>
         )
     }

@@ -16,18 +16,18 @@ const data = [
     {id: 8, icon: 'heartbeat', header: 12, description: 'Odbytych maratonów w 2019 roku', color: '#28bb76'},
 ]
 
-export default class Home extends Component {
-    renderAllData = () => data.map((item) =>
-        <Grid.Column key={item.id} mobile={14} tablet={7} computer={3}>
-            <SingleInfo item={item}/>           
-        </Grid.Column>
-    )
+const AllDataRows = (props) => props.rowsData.map((item) =>
+    <Grid.Column key={item.id} mobile={14} tablet={7} computer={3}>
+        <SingleInfo item={item}/>           
+    </Grid.Column>
+)
 
+export default class Home extends Component {
     render() {     
         return (
             <Grid textAlign='center'> 
                 <Grid.Row>
-                    {this.renderAllData()}
+                    <AllDataRows rowsData={data} />
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column mobile={14} tablet={14} computer={6}>
