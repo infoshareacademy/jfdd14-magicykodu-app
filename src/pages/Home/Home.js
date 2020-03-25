@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import { Grid, Item, Icon } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import AreaChartUsers from '../../components/AreaChartEvents/AreaChartEvents'
 import PieChartAge from '../../components/PieChartAge/PieChartAge'
+import SingleInfo from '../../components/SingleInfo/SingleInfo'
 import './Home.css'
 
 const data = [
@@ -16,25 +17,17 @@ const data = [
 ]
 
 export default class Home extends Component {
-    render() {
-        const appData = data.map(item => 
-            <Grid.Column key={item.id} mobile={14} tablet={7} computer={3}>
-                <Item verticalAlign='middle'>
-                    <Icon style={{color:item.color}} name={item.icon} size='huge'/>
-                    <Item.Content>
-                        <Item.Header>
-                            <h3>{item.header}</h3>
-                        </Item.Header>
-                        <Item.Description>
-                            <p>{item.description}</p>
-                        </Item.Description>
-                    </Item.Content>
-                </Item>          
-            </Grid.Column>)
+    renderAllData = () => data.map((item) =>
+        <Grid.Column key={item.id} mobile={14} tablet={7} computer={3}>
+            <SingleInfo item={item}/>           
+        </Grid.Column>
+    )
+
+    render() {     
         return (
             <Grid textAlign='center'> 
                 <Grid.Row>
-                    {appData}
+                    {this.renderAllData()}
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column mobile={14} tablet={14} computer={6}>
