@@ -20,7 +20,7 @@ export default class Topbar extends Component {
 
       return (
         <div >
-          <Segment inverted>
+          <Segment inverted className="segment__topbar">
             <Menu inverted secondary>
               <Menu.Item 
                   icon="bars"
