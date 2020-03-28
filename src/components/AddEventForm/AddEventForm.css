@@ -3,6 +3,10 @@
     width: 90%;
 }
 
+.react-datepicker-wrapper {
+    display: block;
+}
+
 /* Extra small devices (landscape phones, less than 576px) */
 @media (max-width: 575px) { 
 
