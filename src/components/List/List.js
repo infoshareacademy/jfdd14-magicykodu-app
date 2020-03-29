@@ -1,31 +1,26 @@
 import React from 'react'
-import { Button, Icon, Image, Item, Label } from 'semantic-ui-react'
+import { Button, Icon, Item, } from 'semantic-ui-react'
 import PaginationExampleCompact from '../Pagination/Pagination'
 import allList from "../List/List.json";
 
 console.log(allList)
 
-
-const ItemExampleDivided = props => {
-  const item = allList.map(el => `</br>User ID:${item.name}</br> ID: ${item.place} </br> TITLE: ${item.date}`)
-  console.log(ItemExampleDivided)
-
-    return (
-  <Item.Group divided>
-    <Item>
-      <Item.Image src={item.image} />
-
+const ItemExampleDivided = () => {
+  const item = allList.map(el => 
+    <div>
+      <Item.Image src={el.image} />
       <Item.Content>
-        <Item.Header as='a'>Nazwa:{item.name}</Item.Header><br></br>
+        <Item.Header as='a'>Nazwa:{el.name}</Item.Header><br></br>
         <Item.Meta>
-          <span className='cinema'>Miasto:{' '+ item.place}</span>
+          <span className='cinema'>Miasto:{' '+ el.place}</span>
         </Item.Meta><br></br>
         <Item.Meta>
-          <span className='cinema'>Data:{item.date}</span>
+          <span className='cinema'>Data:{el.date}</span>
         </Item.Meta><br></br>
         <Item.Meta>
-          <span className='cinema'>Dystans:{item.distance}</span>
-        </Item.Meta><br></br>
+          <span className='cinema'>Dystans:{el.distance}</span>
+        </Item.Meta>
+        <br></br>
         <Item.Extra>
           <Button primary floated='right'>
             Zapisz się na bieg!
@@ -33,10 +28,18 @@ const ItemExampleDivided = props => {
           </Button>
         </Item.Extra>
       </Item.Content>
-    </Item>
-    <PaginationExampleCompact />
-    </Item.Group>
-)
+    </div>   
+  )
+
+  return (
+    <Item.Group divided>
+      <Item>
+        {item}
+      </Item>
+      <PaginationExampleCompact />
+    </Item.Group>  
+  )
 }
+
 export default ItemExampleDivided
 
