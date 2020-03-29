@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Icon, Sidebar } from 'semantic-ui-react'
+import { Menu, Icon, Sidebar, Button } from 'semantic-ui-react'
+import ShareLink from 'react-facebook-share-link'
 import './MySidebar.css'
 
 export default class MySidebar extends Component{
@@ -40,7 +41,12 @@ export default class MySidebar extends Component{
                 <Menu.Item as={ Link } to="/ulubione" style={{fontWeight: "400", color: "#1e1e1e"}}>      
                     <Icon name='heart' />
                     Ulubione
-                </Menu.Item>      
+                </Menu.Item>   
+                <Button className='sidebar__button'>
+                    <ShareLink link='http://app.magicykodu.jfdd14.is-academy.pl/'>
+                        {link => (<a href={link} target='_blank' rel='noopener noreferrer'><Icon name='facebook official' />Share</a>)}
+                    </ShareLink>
+                </Button>    
             </Sidebar>      
         )
     }

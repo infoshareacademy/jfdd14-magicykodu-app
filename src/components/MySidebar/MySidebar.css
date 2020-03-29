@@ -3,3 +3,8 @@
     z-index: 0;
 }
 
+.sidebar__button{
+    position: relative;
+    top: calc(100vh - 450px);
+}
+
