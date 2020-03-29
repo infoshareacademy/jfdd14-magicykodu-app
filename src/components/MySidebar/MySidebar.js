@@ -44,7 +44,7 @@ export default class MySidebar extends Component{
                 </Menu.Item>   
                 <Button className='sidebar__button'>
                     <ShareLink link='http://app.magicykodu.jfdd14.is-academy.pl/'>
-                        {link => (<a href={link} target='_blank' rel='noopener noreferrer'><Icon name='facebook official' />Share</a>)}
+                        {link => (<a href={link} target='_blank' rel='noopener noreferrer'><Icon name='facebook official' />Udostępnij</a>)}
                     </ShareLink>
                 </Button>    
             </Sidebar>      
