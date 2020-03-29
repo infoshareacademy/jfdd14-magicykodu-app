@@ -1,27 +1,42 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { List } from 'semantic-ui-react'
+import React from 'react'
+import { Button, Icon, Image, Item, Label } from 'semantic-ui-react'
+import PaginationExampleCompact from '../Pagination/Pagination'
+import allList from "../List/List.json";
+
+console.log(allList)
 
 
-const data = [ { 
-    title: 'Title 1',
-    desc: 'Test 1'
-}];
+const ItemExampleDivided = props => {
+  const item = allList.map(el => `</br>User ID:${item.name}</br> ID: ${item.place} </br> TITLE: ${item.date}`)
+  console.log(ItemExampleDivided)
 
-class List2 extends Component {
-    render() {
-        return (
-            <List divided relaxed>
-                <List.Item>
-                    <List.Icon name='github' size='large' verticalAlign='middle' />
-                    <List.Content>
-                        <List.Header as='a'>Semantic-Org/Semantic-UI</List.Header>
-                        <List.Description as='a'>Updated 10 mins ago</List.Description>
-                    </List.Content>
-                </List.Item>
-            </List>
-        )
-    }
+    return (
+  <Item.Group divided>
+    <Item>
+      <Item.Image src={item.image} />
+
+      <Item.Content>
+        <Item.Header as='a'>Nazwa:{item.name}</Item.Header><br></br>
+        <Item.Meta>
+          <span className='cinema'>Miasto:{' '+ item.place}</span>
+        </Item.Meta><br></br>
+        <Item.Meta>
+          <span className='cinema'>Data:{item.date}</span>
+        </Item.Meta><br></br>
+        <Item.Meta>
+          <span className='cinema'>Dystans:{item.distance}</span>
+        </Item.Meta><br></br>
+        <Item.Extra>
+          <Button primary floated='right'>
+            Zapisz się na bieg!
+            <Icon name='right chevron' />
+          </Button>
+        </Item.Extra>
+      </Item.Content>
+    </Item>
+    <PaginationExampleCompact />
+    </Item.Group>
+)
 }
+export default ItemExampleDivided
 
-export default List2;
