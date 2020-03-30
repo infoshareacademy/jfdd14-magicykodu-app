@@ -1,13 +1,13 @@
 import React from 'react'
 import { Button, Icon, Item, } from 'semantic-ui-react'
 import PaginationExampleCompact from '../Pagination/Pagination'
-import allList from "../List/List.json";
+import allList from '../../List.json';
 
 console.log(allList)
 
 const ItemExampleDivided = () => {
   const item = allList.map(el => 
-    <div>
+    <div className='divHeight'>
       <Item.Image src={el.image} />
       <Item.Content>
         <Item.Header as='a'>Nazwa:{el.name}</Item.Header><br></br>
@@ -33,7 +33,7 @@ const ItemExampleDivided = () => {
 
   return (
     <Item.Group divided>
-      <Item>
+      <Item className='row'>
         {item}
       </Item>
       <PaginationExampleCompact />
