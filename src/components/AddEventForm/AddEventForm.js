@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, Header, Modal, Input } from 'semantic-ui-react'
+import { Button, Form, Header, Modal, Input, Popup } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker';
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -28,7 +28,8 @@ export default class AddEventForm extends Component {
         run: '',
         numOfrunners: '',
         charge: '',
-        img: ''
+        img: '',
+        confirm: false
     }
 
     handleClick = (props) => {
@@ -41,21 +42,41 @@ export default class AddEventForm extends Component {
 
     handleChange = (e, { name, value }) => {
         if (this.state.hasOwnProperty(name)) {
-          this.setState({ [name]: value });
+          this.setState({ [name]: value })
         }
-    };
+    }
+
+    handleChangeCheckbox = (e, { name, checked }) => {
+        if (this.state.hasOwnProperty(name)) {
+          this.setState({ [name]: checked })
+        }
+    }
 
     onFormSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
     }
 
     render() {
+        const addEventBtn = this.state.confirm ?
+        <Modal   
+            trigger={<Button 
+                        type='submit' 
+                        color='grey'
+                        onClick={this.handleClick}>
+                        Dodaj wydarzenie
+                    </Button>} 
+            header='Gratulacje!'
+            content='Stworzyłeś własne wydarzenie.'
+            actions={[{ content: 'Ok', positive: true }]}/> :
+        <Popup content='Zaznacz wymagane zgody' trigger={<Button>Dodaj wydarzenie</Button>} />
+
         return(
             <div className='form__container'>
                 <Header>Stwórz własne wydarzenie</Header>
                 <hr></hr>
                 <br></br>     
-                <Form onSubmit={ this.onFormSubmit }>
+                <Form onSubmit={this.onFormSubmit}>
                     <Form.Input 
                         name="name"
                         value={this.state.name}
@@ -125,16 +146,13 @@ export default class AddEventForm extends Component {
                             onChange={this.handleChange}/>
                     </Form.Field>
                     <br></br> 
-                    <Modal   
-                        trigger={<Button 
-                            type='submit' 
-                            color='grey'
-                            onClick={this.handleClick}>
-                            Dodaj wydarzenie
-                        </Button>} 
-                        header='Gratulacje!'
-                        content='Stworzyłeś własne wydarzenie.'
-                        actions={[{ content: 'Ok', positive: true }]}/>             
+                    <Form.Checkbox 
+                        label='Zgadzam się z warunkami dodawania wydarzeń' 
+                        name='confirm' 
+                        checked={this.state.confirm} 
+                        onChange={this.handleChangeCheckbox}
+                        required/>
+                    {addEventBtn}
                 </Form>
             </div>         
         )
