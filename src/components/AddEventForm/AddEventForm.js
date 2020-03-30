@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, Header, Modal } from 'semantic-ui-react'
+import { Button, Form, Header, Modal, Input } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker';
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -114,14 +114,17 @@ export default class AddEventForm extends Component {
                         onChange={this.handleChange}
                         label='Opłata' 
                         type='number'
-                        placeholder='Opłata'/>
-                    <Form.Input 
-                        name='img'
-                        value={this.state.img}
-                        onChange={this.handleChange}
-                        label='Zdjęcie wydarzenia' 
-                        placeholder='Adres URL' />
-                    <br></br>                
+                        placeholder='Opłata'/> 
+                    <Form.Field>
+                        <label>Zdjęcie wydarzenia</label>
+                        <Input
+                            type="file"
+                            name="img"
+                            accept=".jpg, .jpeg, .png"
+                            value={this.state.img}
+                            onChange={this.handleChange}/>
+                    </Form.Field>
+                    <br></br> 
                     <Modal   
                         trigger={<Button 
                             type='submit' 
