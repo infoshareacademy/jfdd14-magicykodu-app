@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "name": "Bieg Trójmiejski",
+        "place": "Gdańsk",
+        "date": "2020-08-12",
+        "distance": "10 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "2",
+        "name": "Bieg Gdyński",
+        "place": "Gdynia",
+        "date": "2020-08-26",
+        "distance": "12 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "3",
+        "name": "Bieg Sopocki",
+        "place": "Sopot",
+        "date": "2020-07-26",
+        "distance": "18 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "4",
+        "name": "Bieg Kaszubski",
+        "place": "Kartuzy",
+        "date": "2020-08-16",
+        "distance": "20 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "5",
+        "name": "Bieg Morski",
+        "place": "Hel",
+        "date": "2020-08-10",
+        "distance": "6 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "6",
+        "name": "Bieg Krakusa",
+        "place": "Kraków",
+        "date": "2020-08-06",
+        "distance": "25 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "7",
+        "name": "Bieg Stolicy",
+        "place": "Warszawa",
+        "date": "2020-08-02",
+        "distance": "2 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "id": "8",
+        "name": "Bieg Paprykarza",
+        "place": "Szczecin",
+        "date": "2020-08-01",
+        "distance": "42 km",
+        "image": "https://via.placeholder.com/200"
+    }
+]

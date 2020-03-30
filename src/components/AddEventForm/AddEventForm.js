@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Form, Header, Modal, Input, Popup } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker';
+import { uuid } from 'uuidv4';
+import List from '../../List.json'
 
 import "react-datepicker/dist/react-datepicker.css";
 import './AddEventForm.css'
@@ -21,6 +23,7 @@ const typeOfDistance = [
 export default class AddEventForm extends Component {
 
     state = {
+        id: uuid(),
         name: '',
         place: '',
         date: '',
@@ -36,11 +39,11 @@ export default class AddEventForm extends Component {
         this.props.handleClick()
     }
 
-    handleDate = (date) => {
+    handleChangeDate = (date) => {
         this.setState({ date: date })   
     }
 
-    handleChange = (e, { name, value }) => {
+    handleChangeText = (e, { name, value }) => {
         if (this.state.hasOwnProperty(name)) {
           this.setState({ [name]: value })
         }
@@ -52,9 +55,28 @@ export default class AddEventForm extends Component {
         }
     }
 
+    saveToLocaleStorage = () => {
+        List.push(this.state);
+        localStorage.setItem("eventList", JSON.stringify(List));
+    }
+
+    resetForm = () => {
+        this.setState({ 
+            name: '',
+            place: '',
+            date: '',
+            distance: '',
+            run: '',
+            numOfrunners: '',
+            charge: '',
+            img: '',
+        })
+    }
+
     onFormSubmit = (e) => {
         e.preventDefault()
-
+        this.saveToLocaleStorage()
+        this.resetForm()
     }
 
     render() {
@@ -69,7 +91,7 @@ export default class AddEventForm extends Component {
             header='Gratulacje!'
             content='Stworzyłeś własne wydarzenie.'
             actions={[{ content: 'Ok', positive: true }]}/> :
-        <Popup content='Zaznacz wymagane zgody' trigger={<Button>Dodaj wydarzenie</Button>} />
+        <Popup content='Akceptacja regulaminu jest konieczna' trigger={<Button>Dodaj wydarzenie</Button>} />
 
         return(
             <div className='form__container'>
@@ -80,23 +102,21 @@ export default class AddEventForm extends Component {
                     <Form.Input 
                         name="name"
                         value={this.state.name}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Nazwa' 
-                        placeholder='Nazwa' 
                         required />
                     <Form.Input 
                         name="place"
                         value={this.state.place}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Lokalizacja' 
-                        placeholder='Lokalizacja' 
                         required/>
                     <Form.Field required >
                         <label>Data i godzina</label>
                         <DatePicker
                             name='date'
                             selected={this.state.date}
-                            onChange={this.handleDate}
+                            onChange={this.handleChangeDate}
                             showTimeSelect
                             timeIntervals={30}
                             timeCaption='time'
@@ -107,35 +127,31 @@ export default class AddEventForm extends Component {
                         fluid
                         name='distance'
                         value={this.state.distance}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Dystans'
                         options={typeOfDistance}
-                        placeholder='Dystans'
                         required/> 
                     <Form.Select
                         fluid
                         name='run'
                         value={this.state.run}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Rodzaj biegu'
                         options={typeOfRun}
-                        placeholder='Rodzaj biegu'
                         required/> 
                     <Form.Input 
                         name='numOfrunners'
                         value={this.state.numOfrunners}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Liczba uczestników' 
                         type='number'
-                        placeholder='Liczba uczestników'  
                         required/>
                     <Form.Input 
                         name='charge'
                         value={this.state.charge}
-                        onChange={this.handleChange}
+                        onChange={this.handleChangeText}
                         label='Opłata' 
-                        type='number'
-                        placeholder='Opłata'/> 
+                        type='number'/> 
                     <Form.Field>
                         <label>Zdjęcie wydarzenia</label>
                         <Input
@@ -143,11 +159,11 @@ export default class AddEventForm extends Component {
                             name="img"
                             accept=".jpg, .jpeg, .png"
                             value={this.state.img}
-                            onChange={this.handleChange}/>
+                            onChange={this.handleChangeText}/>
                     </Form.Field>
                     <br></br> 
                     <Form.Checkbox 
-                        label='Zgadzam się z warunkami dodawania wydarzeń' 
+                        label='Akceptuję regulamin' 
                         name='confirm' 
                         checked={this.state.confirm} 
                         onChange={this.handleChangeCheckbox}
