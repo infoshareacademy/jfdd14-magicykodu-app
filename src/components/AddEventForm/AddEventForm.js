@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Button, Form, Header, Modal, Input, Popup } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
 import CreatableSelect from "react-select/creatable";
+import { Button, Form, Header, Input, Popup } from "semantic-ui-react";
 import { uuid } from "uuidv4";
+
 import List from "../../List.json";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -17,8 +18,7 @@ const typeOfdistance = [
   { key: "5", label: "5 km", value: "5" },
   { key: "10", label: "10 km", value: "10" },
   { key: "half-m", label: "Półmaraton", value: "half-marathon" },
-  { key: "m", label: "Maraton", value: "marathon" },
-  { key: "o", label: "Inne", value: "Other" }
+  { key: "m", label: "Maraton", value: "marathon" }
 ];
 
 export default class AddEventForm extends Component {
@@ -35,16 +35,17 @@ export default class AddEventForm extends Component {
     confirm: false
   };
 
-  handleInputChange = distance => {
+  handleClick = props => {
+    this.props.handleClick();
+    alert("Gratulacje! Dodałeś wydarzenie!");
+  };
+
+  handleChangeDistance = distance => {
     this.setState({ distance });
   };
 
-  handleInputChangeRun = run => {
+  handleChangeRun = run => {
     this.setState({ run });
-  };
-
-  handleClick = props => {
-    this.props.handleClick();
   };
 
   handleChangeDate = date => {
@@ -78,6 +79,7 @@ export default class AddEventForm extends Component {
       numOfrunners: "",
       charge: "",
       img: "",
+      description: "",
       confirm: false
     });
   };
@@ -89,21 +91,30 @@ export default class AddEventForm extends Component {
   };
 
   render() {
-    const addEventBtn = this.state.confirm ? (
-      <Modal
-        trigger={
-          <Button type="submit" color="grey" onClick={this.handleClick}>
-            Dodaj wydarzenie
-          </Button>
-        }
-        header="Gratulacje!"
-        content="Stworzyłeś własne wydarzenie."
-        actions={[{ content: "Ok", positive: true }]}
-      />
+    const {
+      name,
+      place,
+      date,
+      distance,
+      run,
+      numOfrunners,
+      charge,
+      img,
+      description,
+      confirm
+    } = this.state;
+    const addEventBtn = confirm ? (
+      <Button type="submit" color="grey" onClick={this.handleClick}>
+        Dodaj wydarzenie
+      </Button>
     ) : (
       <Popup
         content="Akceptacja regulaminu jest konieczna"
-        trigger={<Button type="submit" color="grey">Dodaj wydarzenie</Button>}
+        trigger={
+          <Button type="submit" color="grey">
+            Dodaj wydarzenie
+          </Button>
+        }
       />
     );
 
@@ -115,14 +126,14 @@ export default class AddEventForm extends Component {
         <Form onSubmit={this.onFormSubmit}>
           <Form.Input
             name="name"
-            value={this.state.name}
+            value={name}
             onChange={this.handleChangeText}
             label="Nazwa"
             required
           />
           <Form.Input
             name="place"
-            value={this.state.place}
+            value={place}
             onChange={this.handleChangeText}
             label="Lokalizacja"
             required
@@ -131,7 +142,8 @@ export default class AddEventForm extends Component {
             <label>Data i godzina</label>
             <DatePicker
               name="date"
-              selected={this.state.date}
+              minDate={new Date()}
+              selected={date}
               onChange={this.handleChangeDate}
               showTimeSelect
               timeIntervals={30}
@@ -140,46 +152,48 @@ export default class AddEventForm extends Component {
               dateFormat="MMMM d, yyyy h:mm"
             />
           </Form.Field>
-          <Form.Field>
-            <label>
-              Dystans
+          <Form.Field required>
+            <label>Dystans</label>
               <CreatableSelect
                 isClearable
-                onChange={this.handleInputChange}
-                value={this.state.distance}
+                onChange={this.handleChangeDistance}
+                value={distance}
                 options={typeOfdistance}
-                placeholder="Wybierz..."
+                placeholder="Wybierz lub dodaj..."
               />
-            </label>
           </Form.Field>
-          <Form.Field>
-            <label>
-              Rodzaj biegu
+          <Form.Field required>
+            <label>Rodzaj biegu</label>
               <CreatableSelect
                 isClearable
                 name="run"
-                onChange={this.handleInputChangeRun}
-                value={this.state.run}
+                onChange={this.handleChangeRun}
+                value={run}
                 options={typeOfRun}
                 placeholder="Wybierz..."
               />
-            </label>
           </Form.Field>
           <Form.Input
             name="numOfrunners"
-            value={this.state.numOfrunners}
+            value={numOfrunners}
             onChange={this.handleChangeText}
             label="Liczba uczestników"
             type="number"
             required
           />
-          <Form.Input
-            name="charge"
-            value={this.state.charge}
-            onChange={this.handleChangeText}
-            label="Opłata"
-            type="number"
-          />
+          <Form.Field>
+            <label>
+              Opłata
+              <Input
+                name="charge"
+                value={charge}
+                onChange={this.handleChangeText}
+                label={{ basic: true, content: "PLN" }}
+                labelPosition="right"
+                type="number"
+              />
+            </label>
+          </Form.Field>
           <Form.Field>
             <label>
               Zdjęcie wydarzenia
@@ -190,18 +204,25 @@ export default class AddEventForm extends Component {
                 name="img"
                 title=" "
                 accept=".jpg, .jpeg, .png"
-                value={this.state.img}
+                value={img}
                 onChange={this.handleChangeText}
               />
             </label>
           </Form.Field>
+          <Form.TextArea
+            value={description}
+            onChange={this.handleChangeText}
+            name="description"
+            label='Opis wydarzenia'
+            required
+            />
+          <br></br>
           <br></br>
           <Form.Checkbox
             label="Akceptuję regulamin"
             name="confirm"
-            checked={this.state.confirm}
+            checked={confirm}
             onChange={this.handleChangeCheckbox}
-            required
           />
           {addEventBtn}
         </Form>
