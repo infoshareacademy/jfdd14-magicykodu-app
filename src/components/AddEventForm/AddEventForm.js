@@ -32,6 +32,7 @@ export default class AddEventForm extends Component {
     numOfrunners: "",
     charge: "",
     img: "",
+    description: "",
     confirm: false
   };
 
@@ -111,11 +112,7 @@ export default class AddEventForm extends Component {
     ) : (
       <Popup
         content="Akceptacja regulaminu jest konieczna"
-        trigger={
-          <Button type="submit" color="grey">
-            Dodaj wydarzenie
-          </Button>
-        }
+        trigger={<Button color="grey">Dodaj wydarzenie</Button>}
       />
     );
 
@@ -150,28 +147,28 @@ export default class AddEventForm extends Component {
               timeIntervals={30}
               timeCaption="time"
               dateFormat="MMMM d, yyyy h:mm"
-              placeholderText="MM/DD/RRRR g:mm"  
+              placeholderText="MM/DD/RRRR g:mm"
             />
           </Form.Field>
           <Form.Field required>
             <label>Dystans</label>
-              <CreatableSelect
-                isClearable
-                value={distance}
-                onChange={this.handleChangeDistance} 
-                options={typeOfdistance}
-                placeholder="Wybierz lub dodaj..."
-              />
+            <CreatableSelect
+              isClearable
+              value={distance}
+              onChange={this.handleChangeDistance}
+              options={typeOfdistance}
+              placeholder="Wybierz lub dodaj..."
+            />
           </Form.Field>
           <Form.Field required>
             <label>Rodzaj biegu</label>
-              <CreatableSelect
-                isClearable
-                value={run}
-                onChange={this.handleChangeRun}
-                options={typeOfRun}
-                placeholder="Wybierz..."
-              />
+            <CreatableSelect
+              isClearable
+              value={run}
+              onChange={this.handleChangeRun}
+              options={typeOfRun}
+              placeholder="Wybierz..."
+            />
           </Form.Field>
           <Form.Input
             name="numOfrunners"
@@ -212,9 +209,9 @@ export default class AddEventForm extends Component {
             name="description"
             value={description}
             onChange={this.handleChangeText}
-            label='Opis wydarzenia'
+            label="Opis wydarzenia"
             required
-            />
+          />
           <br></br>
           <br></br>
           <Form.Checkbox
@@ -222,6 +219,7 @@ export default class AddEventForm extends Component {
             checked={confirm}
             onChange={this.handleChangeCheckbox}
             label="Akceptuję regulamin"
+            required
           />
           {addEventBtn}
         </Form>
