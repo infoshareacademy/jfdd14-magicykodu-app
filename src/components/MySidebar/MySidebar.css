@@ -3,3 +3,12 @@
     z-index: 0;
 }
 
+.sidebar__button{
+    position: relative;
+    top: calc(100vh - 420px);
+    font-size: 1.1rem !important;
+    padding: 8px !important;
+    margin: 0 auto !important;
+    color: white !important;
+}
+
