@@ -103,6 +103,7 @@ export default class AddEventForm extends Component {
       description,
       confirm
     } = this.state;
+
     const addEventBtn = confirm ? (
       <Button type="submit" color="grey" onClick={this.handleClick}>
         Dodaj wydarzenie
@@ -142,22 +143,22 @@ export default class AddEventForm extends Component {
             <label>Data i godzina</label>
             <DatePicker
               name="date"
-              minDate={new Date()}
               selected={date}
               onChange={this.handleChangeDate}
+              minDate={new Date()}
               showTimeSelect
               timeIntervals={30}
               timeCaption="time"
-              placeholderText="MM/DD/RRRR g:mm"
               dateFormat="MMMM d, yyyy h:mm"
+              placeholderText="MM/DD/RRRR g:mm"  
             />
           </Form.Field>
           <Form.Field required>
             <label>Dystans</label>
               <CreatableSelect
                 isClearable
-                onChange={this.handleChangeDistance}
                 value={distance}
+                onChange={this.handleChangeDistance} 
                 options={typeOfdistance}
                 placeholder="Wybierz lub dodaj..."
               />
@@ -166,9 +167,8 @@ export default class AddEventForm extends Component {
             <label>Rodzaj biegu</label>
               <CreatableSelect
                 isClearable
-                name="run"
-                onChange={this.handleChangeRun}
                 value={run}
+                onChange={this.handleChangeRun}
                 options={typeOfRun}
                 placeholder="Wybierz..."
               />
@@ -200,29 +200,28 @@ export default class AddEventForm extends Component {
               <Input
                 className="image"
                 id="img"
-                type="file"
-                name="img"
-                title=" "
                 accept=".jpg, .jpeg, .png"
+                name="img"
                 value={img}
                 onChange={this.handleChangeText}
+                type="file"
               />
             </label>
           </Form.Field>
           <Form.TextArea
+            name="description"
             value={description}
             onChange={this.handleChangeText}
-            name="description"
             label='Opis wydarzenia'
             required
             />
           <br></br>
           <br></br>
           <Form.Checkbox
-            label="Akceptuję regulamin"
             name="confirm"
             checked={confirm}
             onChange={this.handleChangeCheckbox}
+            label="Akceptuję regulamin"
           />
           {addEventBtn}
         </Form>
