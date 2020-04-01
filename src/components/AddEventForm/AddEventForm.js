@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, Header, Modal, Input, Popup } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
-import CreatableSelect from 'react-select/creatable';
+import CreatableSelect from "react-select/creatable";
 import { uuid } from "uuidv4";
 import List from "../../List.json";
 
@@ -9,16 +9,16 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./AddEventForm.css";
 
 const typeOfRun = [
-  { key: "u", text: "Uliczny", value: "street" },
-  { key: "p", text: "Przełajowy", value: "cross-country" }
+  { key: "u", label: "Uliczny", value: "street" },
+  { key: "p", label: "Przełajowy", value: "cross-country" }
 ];
 
-const options = [
-  { key: "5", text: "5 km", value: "5" },
-  { key: "10", text: "10 km", value: "10" },
-  { key: "half-m", text: "Półmaraton", value: "half-marathon" },
-  { key: "m", text: "Maraton", value: "marathon" },
-  { key: "o", text: "Inne", value: "Other" }
+const typeOfdistance = [
+  { key: "5", label: "5 km", value: "5" },
+  { key: "10", label: "10 km", value: "10" },
+  { key: "half-m", label: "Półmaraton", value: "half-marathon" },
+  { key: "m", label: "Maraton", value: "marathon" },
+  { key: "o", label: "Inne", value: "Other" }
 ];
 
 export default class AddEventForm extends Component {
@@ -28,7 +28,6 @@ export default class AddEventForm extends Component {
     place: "",
     date: "",
     distance: "",
-    createdOptions: [],
     run: "",
     numOfrunners: "",
     charge: "",
@@ -36,8 +35,12 @@ export default class AddEventForm extends Component {
     confirm: false
   };
 
-  handleInputChange = (distance) => {
-    this.setState({ distance, createdOptions: {} });
+  handleInputChange = distance => {
+    this.setState({ distance });
+  };
+
+  handleInputChangeRun = run => {
+    this.setState({ run });
   };
 
   handleClick = props => {
@@ -56,7 +59,10 @@ export default class AddEventForm extends Component {
 
   handleChangeCheckbox = (e, { name, checked }) => {
     if (this.state.hasOwnProperty(name)) {
-      this.setState({ [name]: checked });527156
+      this.setState({ [name]: checked });
+    }
+  };
+
   saveToLocaleStorage = () => {
     List.push(this.state);
     localStorage.setItem("eventList", JSON.stringify(List));
@@ -71,7 +77,8 @@ export default class AddEventForm extends Component {
       run: "",
       numOfrunners: "",
       charge: "",
-      img: ""
+      img: "",
+      confirm: false
     });
   };
 
@@ -96,22 +103,9 @@ export default class AddEventForm extends Component {
     ) : (
       <Popup
         content="Akceptacja regulaminu jest konieczna"
-        trigger={<Button>Dodaj wydarzenie</Button>}
+        trigger={<Button type="submit" color="grey">Dodaj wydarzenie</Button>}
       />
     );
-
-    // const distance =
-    //   this.state.distance === "Other" ? (
-    //     <Form.Input
-    //       name="distance"
-    //       value={this.state.distance}
-    //       onChange={this.handleChangeText}
-    //       type="number"
-    //       required
-    //     />
-    //   ) : null;
-
-    // console.log(distance);
 
     return (
       <div className="form__container">
@@ -146,30 +140,31 @@ export default class AddEventForm extends Component {
               dateFormat="MMMM d, yyyy h:mm"
             />
           </Form.Field>
-          
-      
-          
-          <CreatableSelect
-            isClearable
-            onChange={this.handleInputChange}
-            value={this.state.distance}
-            options={options.concat(this.state.createdOptions.map(option => ({ 
-                distance: option, 
-                label: option 
-              })))}/>
-
-
-          {/* {distance} */}
-
-          <Form.Select
-            fluid
-            name="run"
-            value={this.state.run}
-            onChange={this.handleChangeText}
-            label="Rodzaj biegu"
-            options={typeOfRun}
-            required
-          />
+          <Form.Field>
+            <label>
+              Dystans
+              <CreatableSelect
+                isClearable
+                onChange={this.handleInputChange}
+                value={this.state.distance}
+                options={typeOfdistance}
+                placeholder="Wybierz..."
+              />
+            </label>
+          </Form.Field>
+          <Form.Field>
+            <label>
+              Rodzaj biegu
+              <CreatableSelect
+                isClearable
+                name="run"
+                onChange={this.handleInputChangeRun}
+                value={this.state.run}
+                options={typeOfRun}
+                placeholder="Wybierz..."
+              />
+            </label>
+          </Form.Field>
           <Form.Input
             name="numOfrunners"
             value={this.state.numOfrunners}

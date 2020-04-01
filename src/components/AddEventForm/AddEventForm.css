@@ -34,9 +34,18 @@ input[type="file"] {
   
 
 .image input::-webkit-file-upload-button {
-    
     position: relative;
     right: 0 !important;
+}
+
+.css-g1d714-ValueContainer{
+    padding: 0 !important;
+}
+
+.css-1wa3eu0-placeholder{
+    padding: .67857143em 1em;
+    opacity: 0.5;
+    font-weight: 400;
 }
 
 .react-datepicker-wrapper {
