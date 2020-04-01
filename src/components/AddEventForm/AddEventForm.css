@@ -3,6 +3,42 @@
     width: 90%;
 }
 
+input[type="file"]:after { /* Mask the no file chosen label */
+    background-color: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 10;  
+    opacity: 0.7
+}
+
+input[type="file"] {
+    border: 1px solid #333;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    z-index: 1;
+  }
+  
+
+.image input::-webkit-file-upload-button {
+    
+    position: relative;
+    right: 0 !important;
+}
+
 .react-datepicker-wrapper {
     display: block;
 }
