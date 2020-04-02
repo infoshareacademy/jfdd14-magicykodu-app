@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
+import Search from '../../components/Search/Search'
+import List from '../../List.json'
 
 class EventList extends Component {
     render() {
         return (
             <div>
-                Lista
+                <Search list={List}/>          
             </div>
         )
     }
