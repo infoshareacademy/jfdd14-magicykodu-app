@@ -1,45 +1,51 @@
 import React from 'react'
 import { Button, Icon, Item, } from 'semantic-ui-react'
-import PaginationExampleCompact from '../Pagination/Pagination'
-import allList from '../../List.json';
+import PaginationExampleControlled from '../Pagination/Pagination'
+import { Grid } from 'semantic-ui-react'
 
-console.log(allList)
-
-const ItemExampleDivided = () => {
-  const item = allList.map(el => 
+const List = ({ events, activePage, onPageChange, totalPages }) => {
+  const items = events.map(el =>
     <div className='divHeight'>
       <Item.Image src={el.image} />
-      <Item.Content>
-        <Item.Header as='a'>Nazwa:{el.name}</Item.Header><br></br>
+      <Grid.Column>
+        <Item.Content><br />
+        <Item.Header as='a'>Nazwa:{' ' + el.name}</Item.Header>
         <Item.Meta>
-          <span className='cinema'>Miasto:{' '+ el.place}</span>
-        </Item.Meta><br></br>
-        <Item.Meta>
-          <span className='cinema'>Data:{el.date}</span>
-        </Item.Meta><br></br>
-        <Item.Meta>
-          <span className='cinema'>Dystans:{el.distance}</span>
+          <span className='cinema'>Miasto:{' ' + el.place}</span>
         </Item.Meta>
-        <br></br>
+        <Item.Meta>
+          <span className='cinema'>Data:{' ' + el.date}</span>
+        </Item.Meta>
+        <Item.Meta>
+          <span className='cinema'>Dystans:{' ' + el.distance}</span>
+        </Item.Meta>
+        <Grid.Row> 
         <Item.Extra>
-          <Button primary floated='right'>
+          <Button className='btn' primary floated='left'>
             Zapisz się na bieg!
             <Icon name='right chevron' />
           </Button>
         </Item.Extra>
+        </Grid.Row>
       </Item.Content>
-    </div>   
+      </Grid.Column>
+    </div>
   )
 
   return (
+
     <Item.Group divided>
       <Item className='row'>
-        {item}
+        {items}
       </Item>
-      <PaginationExampleCompact />
-    </Item.Group>  
+      <PaginationExampleControlled
+        activePage={activePage}
+        onPageChange={onPageChange}
+        totalPages={totalPages}
+      />
+    </Item.Group>
   )
 }
 
-export default ItemExampleDivided
+export default List
 

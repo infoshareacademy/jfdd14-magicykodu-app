@@ -1,16 +1,18 @@
-import React from 'react'
-import { Pagination } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Grid, Pagination } from 'semantic-ui-react'
 
-const PaginationExampleCompact = () => (
-  <Pagination
-    boundaryRange={0}
-    defaultActivePage={1}
-    ellipsisItem={null}
-    firstItem={null}
-    lastItem={null}
-    siblingRange={1}
-    totalPages={10}
-  />
-)
+const PaginationExampleControlled = ({ activePage, onPageChange, totalPages }) => {
+  return (
+    <Grid columns={1} verticalAlign='middle'>
+      <Grid.Column>
+        <Pagination
+          activePage={activePage}
+          onPageChange={onPageChange}
+          totalPages={totalPages}
+        />
+      </Grid.Column>
+    </Grid>
+  )
+}
 
-export default PaginationExampleCompact
+export default PaginationExampleControlled

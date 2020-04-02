@@ -34,7 +34,7 @@
         "distance": "6 km",
         "image": "https://via.placeholder.com/200"
     },
-    {
+    {   
         "name": "Bieg Krakusa",
         "place": "Kraków",
         "date": "2020-08-06",
@@ -53,6 +53,76 @@
         "place": "Szczecin",
         "date": "2020-08-01",
         "distance": "42 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Cracovia",
+        "place": "Kraków",
+        "date": "2020-08-15",
+        "distance": "10 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Stolicy vol 2",
+        "place": "Warszawa",
+        "date": "2020-08-18",
+        "distance": "20 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Podlasia",
+        "place": "Białystok",
+        "date": "2020-06-02",
+        "distance": "10 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Jeziorny",
+        "place": "Olsztyn",
+        "date": "2020-08-02",
+        "distance": "5 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Burmistrza",
+        "place": "Ełk",
+        "date": "2020-08-02",
+        "distance": "10 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Morski",
+        "place": "Hel",
+        "date": "2020-04-02",
+        "distance": "6 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Wiejski",
+        "place": "Banino",
+        "date": "2020-08-02",
+        "distance": "5 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Tczewski vol 2",
+        "place": "Tczew",
+        "date": "2020-05-16",
+        "distance": "2 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Śliwiński",
+        "place": "Śliwiny",
+        "date": "2020-12-18",
+        "distance": "10 km",
+        "image": "https://via.placeholder.com/200"
+    },
+    {
+        "name": "Bieg Polonisty",
+        "place": "Warszawa",
+        "date": "2020-08-11",
+        "distance": "25 km",
         "image": "https://via.placeholder.com/200"
     }
 ]
