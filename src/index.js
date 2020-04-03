@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css';
+
+import './index.css';
 
 import Topbar from './components/Topbar/Topbar';
 import Sidebar from './components/MySidebar/MySidebar'
 import Home from './pages/Home/Home'
 import EventList from './pages/EventList/EventList'
 import Default from './pages/Default/Default'
+
 
 
 ReactDOM.render(
