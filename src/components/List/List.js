@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button, Icon, Item, } from 'semantic-ui-react'
 import PaginationExampleControlled from '../Pagination/Pagination'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 
 const List = ({ events, activePage, onPageChange, totalPages }) => {
   const items = events.map(el =>
-    <div className='divHeight'>
-      <Item.Image class="image" src={el.image} />
+    <Container className='containerList'>
+      <Item.Image className="image" src={el.image} />
       <Grid>
       <Grid.Column>
         <Item.Content><br />
@@ -22,7 +22,7 @@ const List = ({ events, activePage, onPageChange, totalPages }) => {
         </Item.Meta>
         <Grid.Row> 
         <Item.Extra>
-          <Button className='btn' primary floated='right'>
+          <Button className='btn' primary floated='left'>
             Więcej informacji!
             <Icon name='right chevron' />
           </Button>
@@ -32,7 +32,7 @@ const List = ({ events, activePage, onPageChange, totalPages }) => {
       </Item.Content>
       </Grid.Column>
       </Grid>
-    </div>
+    </Container>
   )
 
   return (
@@ -40,6 +40,7 @@ const List = ({ events, activePage, onPageChange, totalPages }) => {
     <Item.Group divided>
       <Item className='row'>
         {items}
+        
       </Item>
       <PaginationExampleControlled
         activePage={activePage}
