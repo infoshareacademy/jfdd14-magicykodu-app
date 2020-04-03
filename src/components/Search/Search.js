@@ -1,62 +1,62 @@
 import React, { Component } from "react";
 import { Grid, Form, Input, Dropdown, Header } from "semantic-ui-react";
-import { uuid } from "uuidv4";
-// import List from '../../List.json'
+// import { uuid } from "uuidv4";
+import allEvents from "../../List.json";
 import "./Search.css";
 
 const typeOfRun = [
-  { key: "u", text: "Uliczny", value: "street" },
-  { key: "p", text: "Przełajowy", value: "cross-country" }
-];
-
-const typeOfdistance = [
-  { key: "5", label: "5 km", value: "5" },
-  { key: "10", label: "10 km", value: "10" },
-  { key: "half-m", label: "Półmaraton", value: "half-marathon" },
-  { key: "m", label: "Maraton", value: "marathon" }
+  { key: "u", text: "Uliczny", value: "Uliczny" },
+  { key: "p", text: "Przełajowy", value: "Przełajowy" }
 ];
 
 export default class Search extends Component {
+  handleFilterPlace = e => this.props.onFilterPlaceChange(e.target.value);
 
-  state = {
-    id: uuid(),
-    place: "",
-    distance: "10",
-    run: "",
-  };
+  handleFilterRun = (e, { value }) => { this.props.onFilterRunChange(value); }
 
-  handleChange = (e, { name, value }) => this.setState({ [name]: value })
+  handleFilterDistance = e => this.props.onFilterDistanceChange(e.target.value);
 
   render() {
-    const {place, distance, run} = this.state
+    const { filterPlace, filterRun, filterDistance } = this.props;
     return (
       <div>
         <Header textAlign="center" className="search__header">
           Znajdź wydarzenie, zapisz się i biegnij!
         </Header>
-        <Grid padded={true}>
-          <Grid.Row columns={1} centered={true}>
+        <hr></hr>
+        <br></br>
+        <Grid>
+          <Grid.Row columns={1} centered={true} className="search__grid">
             <Grid.Column mobile={14} tablet={14} computer={4}>
-              <Input placeholder="Wpisz miasto" fluid onChange={this.handleChange}/>
+              <Input
+                className="search__input"
+                fluid
+                value={filterPlace}
+                onChange={this.handleFilterPlace}
+                placeholder="Wpisz miasto"
+              />
             </Grid.Column>
             <Grid.Column mobile={14} tablet={14} computer={4}>
               <Dropdown
                 fluid
                 selection
                 options={typeOfRun}
+                value={filterRun}
+                onChange={this.handleFilterRun}
                 placeholder="Wybierz rodzaj biegu"
               />
             </Grid.Column>
-            <Grid.Column as ={Form} mobile={14} tablet={14} computer={4}>
+            <Grid.Column as={Form} mobile={14} tablet={14} computer={4}>
               <Form.Input
-                label={`Dystans: ${distance}km `}
+                className="search__flex"
+                label={`Dystans: ${filterDistance}km `}
+                name="distance"
+                value={filterDistance}
+                onChange={this.handleFilterDistance}
                 min={0}
                 max={100}
-                name="distance"
-                onChange={this.handleChange}
                 step={1}
                 type="range"
-                value={distance}
               />
             </Grid.Column>
           </Grid.Row>

@@ -46,7 +46,7 @@ export default class AddEventForm extends Component {
   };
 
   handleChangeRun = run => {
-    this.setState({ run });
+    this.setState({ run: run.value });
   };
 
   handleChangeDate = date => {

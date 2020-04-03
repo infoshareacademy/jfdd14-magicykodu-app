@@ -4,7 +4,8 @@
         "name": "Bieg Trójmiejski",
         "place": "Gdańsk",
         "date": "2020-08-12",
-        "distance": "10 km",
+        "distance": "10",
+        "run": "Uliczny",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -12,7 +13,8 @@
         "name": "Bieg Gdyński",
         "place": "Gdynia",
         "date": "2020-08-26",
-        "distance": "12 km",
+        "distance": "10",
+        "run": "Uliczny",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -20,7 +22,7 @@
         "name": "Bieg Sopocki",
         "place": "Sopot",
         "date": "2020-07-26",
-        "distance": "18 km",
+        "distance": "18",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -28,7 +30,7 @@
         "name": "Bieg Kaszubski",
         "place": "Kartuzy",
         "date": "2020-08-16",
-        "distance": "20 km",
+        "distance": "20",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -36,7 +38,7 @@
         "name": "Bieg Morski",
         "place": "Hel",
         "date": "2020-08-10",
-        "distance": "6 km",
+        "distance": "6",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -44,7 +46,7 @@
         "name": "Bieg Krakusa",
         "place": "Kraków",
         "date": "2020-08-06",
-        "distance": "25 km",
+        "distance": "25",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -52,7 +54,7 @@
         "name": "Bieg Stolicy",
         "place": "Warszawa",
         "date": "2020-08-02",
-        "distance": "2 km",
+        "distance": "2",
         "image": "https://via.placeholder.com/200"
     },
     {
@@ -60,7 +62,7 @@
         "name": "Bieg Paprykarza",
         "place": "Szczecin",
         "date": "2020-08-01",
-        "distance": "42 km",
+        "distance": "42",
         "image": "https://via.placeholder.com/200"
     }
 ]
