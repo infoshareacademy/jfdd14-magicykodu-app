@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import List from '../../components/List/List'
-
+import EventListStyle from './EventListStyle.css'
 import allEvents from '../../List.json'
 
-const IMEMS_PER_PAGE = 10
+const IMEMS_PER_PAGE = 5
 
 class EventList extends Component {
     state = {

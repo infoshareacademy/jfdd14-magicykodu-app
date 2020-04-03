@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Topbar from '../src/components/Topbar/Topbar';
-import Sidebar from '../src/components/Sidebar/Sidebar';
-import Home from '../src/pages/Home/Home';
-import EventList from '../src/pages/EventList/EventList';
-import Default from '../src/pages/Default/Default'
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-
+import App from './App';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
+
+import Topbar from './components/Topbar/Topbar';
+import Sidebar from './components/MySidebar/MySidebar'
+import Home from './pages/Home/Home'
+import EventList from './pages/EventList/EventList'
+import Default from './pages/Default/Default'
 
 
 ReactDOM.render(
@@ -26,7 +25,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render( <App/>, document.getElementById('root'));

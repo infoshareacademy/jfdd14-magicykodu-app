@@ -1,0 +1,39 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+    
+  }
+  .divHeight{
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+ 
+  div.content{
+    display: flex;
+    flex-direction: column;
+
+  
+  }
+  div.column{
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+  }
+.btn{
+  margin-left: 0px !important;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  div.column{
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+  }
+      
+  
+}

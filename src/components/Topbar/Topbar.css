@@ -1,0 +1,12 @@
+.segment__topbar{
+    margin: 0 !important;
+    border-radius: 0 !important;
+    z-index: 200;
+    position: fixed !important;
+    right: 0;
+    left: 0;
+}
+
+.logo__item{
+    padding: 0px 13px !important;
+}

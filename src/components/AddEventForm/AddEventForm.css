@@ -1,0 +1,109 @@
+.form__container {
+    margin: 20px auto 0;
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.react-datepicker{
+    display: flex;
+}
+
+.react-datepicker-wrapper {
+    display: block;
+}
+
+input[type="file"]:after { /* Mask the no file chosen label */
+    background-color: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 10;  
+    opacity: 0.7
+}
+
+input[type="file"] {
+    border: 1px solid #333;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    z-index: 1;
+  }
+
+.ui.form .field>label{
+    margin: 0 !important;
+}
+
+.css-yk16xz-control{
+    border-color: rgba(34,36,38,.15) !important
+}
+  
+.image input::-webkit-file-upload-button {
+    position: relative;
+    right: 0 !important;
+}
+
+.css-1okebmr-indicatorSeparator{
+    margin: 0 !important;
+    background-color: rgba(34,36,38,.15) !important;
+}
+
+.css-1uccc91-singleValue{
+    padding: .67857143em 1em;
+    font-weight: 400;
+}
+.css-g1d714-ValueContainer{
+    padding: 0 !important;
+}
+
+.css-1wa3eu0-placeholder{
+    padding: .67857143em 1em;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+/* Extra small devices (landscape phones, less than 576px) */
+@media (max-width: 575px) { 
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .form__container {
+        width: 70%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .form__container {
+        width: 60%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .form__container {
+        width: 60%;
+    }
+
+}
+
+/* Extra large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .form__container {
+        width: 40%;
+    }
+
+}
