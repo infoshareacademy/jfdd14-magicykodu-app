@@ -3,40 +3,33 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
     text-align: left;
-    margin: 100px 100px;
 }
-/* .btn{
-  margin-left: 0 !important;
+.containerList{
+  display: flex !important;
+  margin-top:70px !important;
 }
-div.divHeight{
-  margin: 0px auto !important;
+.ui.grid>.column:only-child{
+  padding: 0px 0px 10px 5px !important;
+  
+  
 }
+.AddImageAndList{
+  display: flex;
+  margin: 0 auto;
+}
+.paginationStyle{
+  display: flex !important;
+  margin: 0 auto !important;
+}
+/* .div.ui.pagination.menu{
+  display: flex !important;
+  margin: 0 auto !important;
+} */
 
-div.ui.pagination.menu{
-  margin: 0 auto;
-}
-div.column{
-  margin: 0 auto;
-} */ 
 
 /* Small devices (landscape phones, 576px and up) */
-/* @media (max-width: 576px) {
-
-.divHeight{
-  width: 60%;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
+@media (max-width: 576px) {
+  .AddImageAndList{
+    display: grid;
+  }
 }
-div.column{
- padding: 0px !important;
- margin: 0 auto !important;
-}
-.btn{
-  margin-bottom: 30px !important;
-}
-img{
-  margin-left: 0px;
-}
-} */

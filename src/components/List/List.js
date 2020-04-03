@@ -6,10 +6,11 @@ import { Grid, Container } from 'semantic-ui-react'
 const List = ({ events, activePage, onPageChange, totalPages }) => {
   const items = events.map(el =>
     <Container className='containerList'>
+      <div className="AddImageAndList">
       <Item.Image className="image" src={el.image} />
       <Grid>
       <Grid.Column>
-        <Item.Content><br />
+        <Item.Content className='ulList'><br />
         <Item.Header as='a'>Nazwa:{' ' + el.name}</Item.Header>
         <Item.Meta>
           <span className='cinema'>Miasto:{' ' + el.place}</span>
@@ -20,8 +21,10 @@ const List = ({ events, activePage, onPageChange, totalPages }) => {
         <Item.Meta>
           <span className='cinema'>Dystans:{' ' + el.distance}</span>
         </Item.Meta>
+        
         <Grid.Row> 
         <Item.Extra>
+          
           <Button className='btn' primary floated='left'>
             Więcej informacji!
             <Icon name='right chevron' />
@@ -32,6 +35,7 @@ const List = ({ events, activePage, onPageChange, totalPages }) => {
       </Item.Content>
       </Grid.Column>
       </Grid>
+      </div>
     </Container>
   )
 
