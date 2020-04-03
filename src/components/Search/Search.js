@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Grid, Form, Input, Dropdown, Header } from "semantic-ui-react";
-// import { uuid } from "uuidv4";
 
 import "./Search.css";
 
