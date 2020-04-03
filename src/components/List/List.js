@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Icon, Item } from "semantic-ui-react";
 import PaginationExampleControlled from "../Pagination/Pagination";
 import { Grid } from "semantic-ui-react";
-import defaultPlaceholder from ''
+// import defaultPlaceholder from ''
 
 const List = ({
   filterPlace,
@@ -22,7 +22,7 @@ const List = ({
       const filterRunCategory = el.run === filterRun || filterRun === "";
       return filterPlaceCategory && filterDistanceCategory && filterRunCategory ? (
         <div className="divHeight" key={el.name}>
-          <Item.Image src={el.image || defaultPlaceholder} />
+          <Item.Image src={el.image} />
           <Grid.Column>
             <Item.Content>
               <br />
