@@ -4,21 +4,21 @@ import CreatableSelect from "react-select/creatable";
 import { Button, Form, Header, Input, Popup } from "semantic-ui-react";
 import { uuid } from "uuidv4";
 
-import List from "../../List.json";
+import list from "../../List.json";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./AddEventForm.css";
 
 const typeOfRun = [
-  { key: "u", label: "Uliczny", value: "street" },
-  { key: "p", label: "Przełajowy", value: "cross-country" }
+  { key: "u", label: "Uliczny", value: "Uliczny" },
+  { key: "p", label: "Przełajowy", value: "Przełajowy" }
 ];
 
 const typeOfdistance = [
   { key: "5", label: "5 km", value: "5" },
   { key: "10", label: "10 km", value: "10" },
-  { key: "half-m", label: "Półmaraton", value: "half-marathon" },
-  { key: "m", label: "Maraton", value: "marathon" }
+  { key: "half-m", label: "Półmaraton", value: "Półmaraton" },
+  { key: "m", label: "Maraton", value: "Maraton" }
 ];
 
 export default class AddEventForm extends Component {
@@ -26,6 +26,7 @@ export default class AddEventForm extends Component {
     id: uuid(),
     name: "",
     place: "",
+    address: "",
     date: "",
     distance: "",
     run: "",
@@ -42,7 +43,7 @@ export default class AddEventForm extends Component {
   };
 
   handleChangeDistance = distance => {
-    this.setState({ distance });
+    this.setState({ distance: distance.value });
   };
 
   handleChangeRun = run => {
@@ -66,14 +67,15 @@ export default class AddEventForm extends Component {
   };
 
   saveToLocaleStorage = () => {
-    List.push(this.state);
-    localStorage.setItem("eventList", JSON.stringify(List));
+    list.push(this.state);
+    localStorage.setItem("eventList", JSON.stringify(list));
   };
 
   resetForm = () => {
     this.setState({
       name: "",
       place: "",
+      address: "",
       date: "",
       distance: "",
       run: "",
@@ -95,6 +97,7 @@ export default class AddEventForm extends Component {
     const {
       name,
       place,
+      address,
       date,
       distance,
       run,
@@ -133,7 +136,14 @@ export default class AddEventForm extends Component {
             name="place"
             value={place}
             onChange={this.handleChangeText}
-            label="Lokalizacja"
+            label="Miasto"
+            required
+          />
+          <Form.Input
+            name="address"
+            value={address}
+            onChange={this.handleChangeText}
+            label="Adres"
             required
           />
           <Form.Field required>
