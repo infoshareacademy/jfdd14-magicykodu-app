@@ -1,128 +1,222 @@
 [
-    {
+    {   "id":"1",
         "name": "Bieg Trójmiejski",
         "place": "Gdańsk",
-        "date": "2020-08-12",
-        "distance": "10 km",
-        "image": "https://via.placeholder.com/200"
-    },
-    {
-        "name": "Bieg Gdyński",
-        "place": "Gdynia",
-        "date": "2020-08-26",
-        "distance": "12 km",
-        "image": "https://via.placeholder.com/200"
-    },
-    {
-        "name": "Bieg Sopocki",
-        "place": "Sopot",
-        "date": "2020-07-26",
-        "distance": "18 km",
-        "image": "https://via.placeholder.com/200"
-    },
-    {
-        "name": "Bieg Kaszubski",
-        "place": "Kartuzy",
-        "date": "2020-08-16",
-        "distance": "20 km",
-        "image": "https://via.placeholder.com/200"
-    },
-    {
-        "name": "Bieg Morski",
-        "place": "Hel",
-        "date": "2020-08-10",
-        "distance": "6 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Grunwaldzka 303",
+        "date": "2020-08-12 12:30",
+        "distance": "15",
+        "run": "Przełajowy",
+        "numOfrunners": "1000",
+        "charge": "10",
+        "image": "https://via.placeholder.com/200",
+        "description": "Zapraszamy was na 15 kilometrową trasę przełajową poprowadzoną przepięknym Trójmiejskim Parkiem Krajobrazowym! Istne szaleństwo, brak kategorii wiekowej."
     },
     {   
-        "name": "Bieg Krakusa",
-        "place": "Kraków",
-        "date": "2020-08-06",
-        "distance": "25 km",
-        "image": "https://via.placeholder.com/200"
+        "id":"2",
+        "name": "Pożegnanie Lata",
+        "place": "Gdynia",
+        "address": "ul. Morska 1, Plac Marynarza",
+        "date": "2020-08-26 10:00",
+        "distance": "10",
+        "run": "Uliczny",
+        "numOfrunners": "2000",
+        "charge": "15",
+        "image": "https://via.placeholder.com/200",
+        "description": "Jedyna taka impreza na wybrzeżu! Żegnamy wakacje w wielkim stylu! 10 km trasa po bulwarze nadmorskim. Więcej info na biegowa.gdynia.pl."
     },
     {
+        "id":"3",
+        "name": "Bieg Sopocki",
+        "place": "Sopot",
+        "address": "ul. Morska 1, Plac Marynarza",
+        "date": "2020-07-26 9:00",
+        "distance": "5",
+        "run": "Uliczny",
+        "numOfrunners": "2000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Bieg rodzinny w samym sercu Trójmiasta. Przyjdź z żoną, mężem, dziećmi, rodzicami, psem czy chomikiem i zdobądź medal Spokockiego Biegacza. Szczegóły na stronie www.bieg2020/bieg-sopocki.pl!"
+    },
+    {
+        "id":"4",
+        "name": "Bieg Kaszubski",
+        "place": "Zblewo",
+        "address": "pl. Zebrań Zblewskich",
+        "date": "2020-05-30 12:00",
+        "distance": "21",
+        "run": "Przełajowy",
+        "numOfrunners": "5000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Sport z sercu kaszub. Idealne wydarzenia, dla wszystkich kochających bieganie oraz przyrodę."
+    },
+    {
+        "id":"5",
+        "name": "Bieg schroniska",
+        "place": "Hel",
+        "address": "ul. Kotkowa 13",
+        "date": "2020-07-21 11:00",
+        "distance": "10",
+        "run": "Uliczny",
+        "numOfrunners": "1500",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Bieganie powinno mieć jakiś sens. W tym przypadku jest przepotężny. Każdy uczestnik, któy przekroczy linię mety zasili konto fundacji."
+    },
+    {
+        "id":"6",
+        "name": "Bieg Paluszka",
+        "place": "Sopot",
+        "address": "ul. Paluszkowa 666",
+        "date": "2020-03-15 12:00",
+        "distance": "5",
+        "run": "Przełajowy",
+        "numOfrunners": "500",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Jedyny, oryginalny, niepowtarzalny, wyjątkowy. Kto z nas nie kocha paluszków? Nie zastanawiaj się ani chwili dłużej!"
+    },
+    {
+        "id":"7",
         "name": "Bieg Stolicy",
         "place": "Warszawa",
-        "date": "2020-08-02",
-        "distance": "2 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Wiejska 100",
+        "date": "2020-05-25 11:30",
+        "distance": "10",
+        "run": "Uliczny",
+        "numOfrunners": "10000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Największe tego typu wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
     {
+        "id":"8",
         "name": "Bieg Paprykarza",
-        "place": "Szczecin",
-        "date": "2020-08-01",
-        "distance": "42 km",
-        "image": "https://via.placeholder.com/200"
+        "place": "Sopot",
+        "address": "ul. Paprykarza 333",
+        "date": "2020-04-20 10:00",
+        "distance": "5",
+        "run": "Uliczny",
+        "numOfrunners": "20000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Ku chwale paprykarza! Dla każdego uczestnika, który ukończy bieg, podarunek - jedyny, prawdziwy Paprykarz Szczecziński."
     },
     {
-        "name": "Bieg Cracovia",
+        "id":"9",
+        "name": "Bieg Smoka",
         "place": "Kraków",
-        "date": "2020-08-15",
-        "distance": "10 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Smoka Wawelskiego 69",
+        "date": "2020-08-15 14:00",
+        "distance": "21",
+        "run": "Uliczny",
+        "numOfrunners": "4000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Jedyny słuszny patron biegania. Ognisty bieg, w jednym z gorętszych miesiąców. Zapraszamy serdecznie."
     },
     {
-        "name": "Bieg Stolicy vol 2",
+        "id":"10",
+        "name": "Bieg Stolicy2",
         "place": "Warszawa",
-        "date": "2020-08-18",
-        "distance": "20 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Wiejska 100",
+        "date": "2020-07-25 11:30",
+        "distance": "10",
+        "run": "Uliczny",
+        "numOfrunners": "10000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Druga edycja największego wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
     {
+        "id":"11",
         "name": "Bieg Podlasia",
         "place": "Białystok",
-        "date": "2020-06-02",
-        "distance": "10 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Zielna 1, Plan Zielny",
+        "date": "2020-09-22 12:00",
+        "distance": "42",
+        "run": "Uliczny",
+        "numOfrunners": "1500",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Największy event na Podlasiu w 2020 roku. Lubisz biegać? Obecność obowiązkowa"
     },
     {
+        "id":"12",
         "name": "Bieg Jeziorny",
         "place": "Olsztyn",
-        "date": "2020-08-02",
-        "distance": "5 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Jeziorna 13",
+        "date": "2020-05-11 13:00",
+        "distance": "5",
+        "run": "Przełajowy",
+        "numOfrunners": "700",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Połącz bieganie z pięknymi widokami."
     },
     {
+        "id":"13",
         "name": "Bieg Burmistrza",
         "place": "Ełk",
-        "date": "2020-08-02",
-        "distance": "10 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Leśna 5",
+        "date": "2020-06-13 12:00",
+        "distance": "10",
+        "run": "Uliczny",
+        "numOfrunners": "3500",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Event organizowany przez Urząd miasta. Zapraszamy rodziny z dziećmi. Zapewniamy wiele atrakcji dla wszystkich."
     },
     {
-        "name": "Bieg Morski",
-        "place": "Hel",
-        "date": "2020-04-02",
-        "distance": "6 km",
-        "image": "https://via.placeholder.com/200"
-    },
-    {
+        "id":"14",
         "name": "Bieg Wiejski",
         "place": "Banino",
-        "date": "2020-08-02",
-        "distance": "5 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Wioślarza 15",
+        "date": "2020-08-02 11:00",
+        "distance": "10",
+        "run": "Przełajowy",
+        "numOfrunners": "800",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Jedyny taki bieg w Polsce. 10km pośród pola rzepaku, w iście wiejskim klimacie."
     },
     {
-        "name": "Bieg Tczewski vol 2",
+        "id":"15",
+        "name": "Bieg Tczewski2",
         "place": "Tczew",
-        "date": "2020-05-16",
-        "distance": "2 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Tczewska 1",
+        "date": "2020-05-16 8:00",
+        "distance": "5",
+        "run": "Uliczny",
+        "numOfrunners": "1000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Druga edycja najlepszego biegu na Kociewiu. Wspaniała atmosfera. Zapraszamy biegaczy wraz z rodzinami."
     },
     {
+        "id":"16",
         "name": "Bieg Śliwiński",
         "place": "Śliwiny",
-        "date": "2020-12-18",
-        "distance": "10 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Monte Casino 13",
+        "date": "2020-12-18 13:00",
+        "distance": "10",
+        "run": "Przełajowy",
+        "numOfrunners": "500",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Klasyczna Śliwa. Nie będzie lekko. Najbardziej przełajowy bieg w Polsce."
     },
     {
+        "id":"17",
         "name": "Bieg Polonisty",
         "place": "Warszawa",
-        "date": "2020-08-11",
-        "distance": "25 km",
-        "image": "https://via.placeholder.com/200"
+        "address": "ul. Zamojskich 13",
+        "date": "2020-08-11 9:00",
+        "distance": "25",
+        "run": "Uliczny",
+        "numOfrunners": "5000",
+        "charge": "",
+        "image": "https://via.placeholder.com/200",
+        "description": "Coroczny event ku czci naszych kochanych nauczycieli!"
     }
 ]
