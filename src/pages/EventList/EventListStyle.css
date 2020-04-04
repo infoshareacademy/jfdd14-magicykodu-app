@@ -30,19 +30,19 @@ div.AddImageAndList{
   box-shadow: 1px 1px 5px 1px #999999;
   background-color: #fff;
   border-radius: 5px;
-  padding: 70px !important;
+  padding: 70px;
 }
 img{
   max-width: 200px;
   max-height: 200px;
 }
 
-/* .div.ui.pagination.menu{
-  display: flex !important;
-  margin: 0 auto !important;
-} */
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 1050px) {
+  div.AddImageAndList{
+    padding: 30px !important;
+  }
+}
+@media (max-width: 880px) {
   .AddImageAndList{
     display: grid;
   }
