@@ -48,11 +48,11 @@ export default class AddEventForm extends Component {
   };
 
   handleChangeDistance = distance => {
-    this.setState({ distance: distance.value });
+    this.setState({ distance: distance });
   };
 
   handleChangeRun = run => {
-    this.setState({ run: run.value });
+    this.setState({ run: run });
   };
 
   handleChangeDate = date => {
@@ -72,8 +72,12 @@ export default class AddEventForm extends Component {
   };
 
   saveToLocaleStorage = () => {
-    list.push(this.state);
-    localStorage.setItem("eventList", JSON.stringify(list));
+    const newItem = { ...this.state }
+    newItem.distance = this.state.distance.value
+    const newItem2 = { ...this.state }
+    newItem2.run = this.state.run.value
+    list.push(this.state)
+    localStorage.setItem("eventList", JSON.stringify(list))
   };
 
   resetForm = () => {
@@ -199,6 +203,7 @@ export default class AddEventForm extends Component {
             onChange={this.handleChangeText}
             label="Liczba uczestników"
             type="number"
+            min="1"
             required
           />
           <Form.Field>
@@ -211,6 +216,7 @@ export default class AddEventForm extends Component {
                 label={{ basic: true, content: "PLN" }}
                 labelPosition="right"
                 type="number"
+                min="0"
               />
             </label>
           </Form.Field>

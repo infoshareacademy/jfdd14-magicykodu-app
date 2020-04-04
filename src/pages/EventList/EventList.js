@@ -14,28 +14,40 @@ class EventList extends Component {
     filterPlace: "",
     filterRun: "",
     filterDistance: "0",
-    list: allEvents
+    list: allEvents,
   };
 
-  handleFilterPlace = filterPlace =>
+  handleFilterPlace = (filterPlace) =>
     this.setState({ filterPlace: filterPlace });
-  handleFilterDistance = filterDistance =>
+  handleFilterDistance = (filterDistance) =>
     this.setState({ filterDistance: filterDistance });
-  handleFilterRun = filterRun => this.setState({ filterRun: filterRun });
+  handleFilterRun = (filterRun) => this.setState({ filterRun: filterRun });
 
   componentDidMount() {
     const list = JSON.parse(localStorage.getItem("eventList"));
     list && this.setState({ list });
   }
+  
   render() {
     const { filterPlace, filterDistance, filterRun } = this.state;
-    const evetsFiltered = allEvents;
-    const totalPages = Math.ceil(evetsFiltered.length / IMEMS_PER_PAGE);
-    const eventsOnActivePage = evetsFiltered.filter(
-      (el, i) =>
-        i >= (this.state.activePage - 1) * IMEMS_PER_PAGE &&
-        i < this.state.activePage * IMEMS_PER_PAGE
-    );
+    const eventsFiltered = allEvents;
+    const totalPages = Math.ceil(eventsFiltered.length / IMEMS_PER_PAGE);
+    const eventsOnActivePage = eventsFiltered
+      .filter((el) => {
+        const filterPlaceCategory =
+          el.place.toLowerCase().indexOf(filterPlace.toLowerCase()) !== -1 ||
+          filterPlace === "";
+        const filterDistanceCategory =
+          el.distance === filterDistance || filterDistance === "0";
+        const filterRunCategory = el.run === filterRun || filterRun === "";
+        return (
+          filterPlaceCategory && filterDistanceCategory && filterRunCategory
+        );
+      })
+      .slice(
+        (this.state.activePage - 1) * IMEMS_PER_PAGE,
+        this.state.activePage * IMEMS_PER_PAGE
+      );
 
     return (
       <div>
@@ -52,10 +64,6 @@ class EventList extends Component {
           activePage={this.state.activePage}
           onPageChange={(e, { activePage }) => this.setState({ activePage })}
           totalPages={totalPages}
-          filterPlace={filterPlace}
-          filterDistance={filterDistance}
-          filterRun={filterRun}
-          list={this.state.list}
         />
       </div>
     );
