@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Icon, Item } from "semantic-ui-react";
 import PaginationExampleControlled from "../Pagination/Pagination";
 import { Grid } from "semantic-ui-react";
-import DefaultPlaceholder from '../DefaultPlaceholder/DefaultPlaceholder'
+import defaultPlaceholder from '../DefaultPlaceholder/defaultPlaceholder.png'
 
 const List = ({
   filterPlace,
@@ -22,22 +22,22 @@ const List = ({
       const filterRunCategory = el.run === filterRun || filterRun === "";
       return filterPlaceCategory && filterDistanceCategory && filterRunCategory ? (
         <div className="divHeight" key={el.name}>
-          <Item.Image src={el.image || <DefaultPlaceholder/>} />
+          <Item.Image src={el.image || defaultPlaceholder} />
           <Grid.Column>
             <Item.Content>
               <br />
-              <Item.Header as="a">Nazwa:{" " + el.name}</Item.Header>
+              <Item.Header as="a">Nazwa: {el.name}</Item.Header>
               <Item.Meta>
-                <span className="cinema">Miasto:{" " + el.place}</span>
+                <span className="cinema">Miasto: {el.place}</span>
               </Item.Meta>
               <Item.Meta>
-                <span className="cinema">Data:{" " + el.date}</span>
+                <span className="cinema">Data: {" " + el.date}</span>
               </Item.Meta>
               <Item.Meta>
-                <span className="cinema">Dystans:{" " + el.distance}</span>
+                <span className="cinema">Dystans: {el.distance} km</span>
               </Item.Meta>
               <Item.Meta>
-                <span className="cinema">Rodzaj biegu:{" " + el.run}</span>
+                <span className="cinema">Rodzaj biegu: {el.run}</span>
               </Item.Meta>
               <Grid.Row>
                 <Item.Extra>
