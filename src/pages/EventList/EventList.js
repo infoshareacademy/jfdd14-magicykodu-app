@@ -5,7 +5,7 @@ import allEvents from "../../List.json";
 
 import './EventListStyle.css'
 
-const IMEMS_PER_PAGE = 5;
+const IMEMS_PER_PAGE = 10;
 // import List from '../../List.json'
 class EventList extends Component {
   state = {

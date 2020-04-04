@@ -18,7 +18,7 @@ const List = ({
         <Grid>
         <Grid.Column>
           <Item.Content className='ulList'><br />
-          <Item.Header as='a'>Nazwa:{' ' + el.name}</Item.Header>
+          <Item.Header className='colourText' as='a'>Nazwa:{' ' + el.name}</Item.Header>
           <Item.Meta>
             <span className='cinema'>Miasto:{' ' + el.place}</span>
           </Item.Meta>
