@@ -4,28 +4,34 @@ import CreatableSelect from "react-select/creatable";
 import { Button, Form, Header, Input, Popup } from "semantic-ui-react";
 import { uuid } from "uuidv4";
 
-import List from "../../List.json";
+import list from "../../List.json";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./AddEventForm.css";
 
 const typeOfRun = [
-  { key: "u", label: "Uliczny", value: "street" },
-  { key: "p", label: "Przełajowy", value: "cross-country" }
+  { key: "u", label: "Uliczny", value: "Uliczny" },
+  { key: "p", label: "Przełajowy", value: "Przełajowy" }
 ];
 
 const typeOfdistance = [
-  { key: "5", label: "5 km", value: "5" },
-  { key: "10", label: "10 km", value: "10" },
-  { key: "half-m", label: "Półmaraton", value: "half-marathon" },
-  { key: "m", label: "Maraton", value: "marathon" }
+  { key: "5", label: "5", value: "5" },
+  { key: "10", label: "10", value: "10" },
+  { key: "half-m", label: "21", value: "21" },
+  { key: "m", label: "42", value: "42" }
 ];
+
+const btnStyle = {
+  backgroundColor: "#28bb76",
+  color: "#fff"
+};
 
 export default class AddEventForm extends Component {
   state = {
     id: uuid(),
     name: "",
     place: "",
+    address: "",
     date: "",
     distance: "",
     run: "",
@@ -42,11 +48,11 @@ export default class AddEventForm extends Component {
   };
 
   handleChangeDistance = distance => {
-    this.setState({ distance });
+    this.setState({ distance: distance.value });
   };
 
   handleChangeRun = run => {
-    this.setState({ run });
+    this.setState({ run: run.value });
   };
 
   handleChangeDate = date => {
@@ -66,14 +72,15 @@ export default class AddEventForm extends Component {
   };
 
   saveToLocaleStorage = () => {
-    List.push(this.state);
-    localStorage.setItem("eventList", JSON.stringify(List));
+    list.push(this.state);
+    localStorage.setItem("eventList", JSON.stringify(list));
   };
 
   resetForm = () => {
     this.setState({
       name: "",
       place: "",
+      address: "",
       date: "",
       distance: "",
       run: "",
@@ -95,6 +102,7 @@ export default class AddEventForm extends Component {
     const {
       name,
       place,
+      address,
       date,
       distance,
       run,
@@ -105,16 +113,24 @@ export default class AddEventForm extends Component {
       confirm
     } = this.state;
 
-    const addEventBtn = confirm ? (
-      <Button type="submit" color="grey" onClick={this.handleClick}>
-        Dodaj wydarzenie
-      </Button>
-    ) : (
-      <Popup
-        content="Akceptacja regulaminu jest konieczna"
-        trigger={<Button color="grey">Dodaj wydarzenie</Button>}
-      />
-    );
+    const addEventBtn =
+      name !== "" &&
+      place !== "" &&
+      (address !== "") & (date !== "") &&
+      distance !== "" &&
+      run !== "" &&
+      numOfrunners !== "" &&
+      description !== "" &&
+      confirm ? (
+        <Button type="submit" style={btnStyle} onClick={this.handleClick}>
+          Dodaj wydarzenie
+        </Button>
+      ) : (
+        <Popup
+          content="Akceptacja regulaminu jest konieczna"
+          trigger={<Button color="grey">Dodaj wydarzenie</Button>}
+        />
+      );
 
     return (
       <div className="form__container">
@@ -133,7 +149,14 @@ export default class AddEventForm extends Component {
             name="place"
             value={place}
             onChange={this.handleChangeText}
-            label="Lokalizacja"
+            label="Miasto"
+            required
+          />
+          <Form.Input
+            name="address"
+            value={address}
+            onChange={this.handleChangeText}
+            label="Adres"
             required
           />
           <Form.Field required>

@@ -7,11 +7,10 @@
 .containerList{
   display: flex !important;
   margin-top:70px !important;
+  width: 70% !important;
 }
 .ui.grid>.column:only-child{
   padding: 0px 0px 10px 5px !important;
-  
-  
 }
 .AddImageAndList{
   display: flex;
@@ -25,8 +24,6 @@
   display: flex !important;
   margin: 0 auto !important;
 } */
-
-
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .AddImageAndList{
