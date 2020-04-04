@@ -21,7 +21,7 @@ code {
   monospace; 
 }
 
-.container{
+.app__container{
   padding-top: 68px !important;
   background-color: #e6e6e6;
   min-height: 100vh !important;
