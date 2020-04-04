@@ -12,7 +12,7 @@ export default class App extends Component {
         return(
             <BrowserRouter>
                 <Topbar/>
-                <div className="container">
+                <div className="app__container">
                     <Switch>      
                         <Route exact path='/' component={Home} />
                         <Route path='/lista-wydarzen' component={EventList} />
