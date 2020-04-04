@@ -1,0 +1,42 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    text-align: left;
+    margin: 100px 100px;
+}
+/* .btn{
+  margin-left: 0 !important;
+}
+div.divHeight{
+  margin: 0px auto !important;
+}
+
+div.ui.pagination.menu{
+  margin: 0 auto;
+}
+div.column{
+  margin: 0 auto;
+} */ 
+
+/* Small devices (landscape phones, 576px and up) */
+/* @media (max-width: 576px) {
+
+.divHeight{
+  width: 60%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+div.column{
+ padding: 0px !important;
+ margin: 0 auto !important;
+}
+.btn{
+  margin-bottom: 30px !important;
+}
+img{
+  margin-left: 0px;
+}
+} */
