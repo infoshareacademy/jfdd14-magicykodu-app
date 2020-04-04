@@ -22,7 +22,7 @@
         "numOfrunners": "2000",
         "charge": "15",
         "image": "https://via.placeholder.com/200",
-        "description": "Jedyna taka impreza na wybrzeżu! Żegnamy wakacje w wielkim stylu! 10 km trasa po bulwarze nadmorskim. Więcej info na biegowa.gdynia.pl"
+        "description": "Jedyna taka impreza na wybrzeżu! Żegnamy wakacje w wielkim stylu! 10 km trasa po bulwarze nadmorskim. Więcej info na biegowa.gdynia.pl."
     },
     {
         "id":"3",
@@ -30,10 +30,10 @@
         "place": "Sopot",
         "address": "ul. Morska 1, Plac Marynarza",
         "date": "2020-07-26 9:00",
+        "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "2000",
         "charge": "",
-        "distance": "5",
         "image": "https://via.placeholder.com/200",
         "description": "Bieg rodzinny w samym sercu Trójmiasta. Przyjdź z żoną, mężem, dziećmi, rodzicami, psem czy chomikiem i zdobądź medal Spokockiego Biegacza. Szczegóły na stronie www.bieg2020/bieg-sopocki.pl!"
     },
@@ -43,36 +43,36 @@
         "place": "Zblewo",
         "address": "pl. Zebrań Zblewskich",
         "date": "2020-05-30 12:00",
+        "distance": "21",
         "run": "Przełajowy",
         "numOfrunners": "5000",
         "charge": "",
-        "distance": "21",
         "image": "https://via.placeholder.com/200",
         "description": "Sport z sercu kaszub. Idealne wydarzenia, dla wszystkich kochających bieganie oraz przyrodę."
     },
     {
         "id":"5",
-        "name": "Bieg charytatywny dla schroniska",
+        "name": "Bieg schroniska",
         "place": "Hel",
         "address": "ul. Kotkowa 13",
         "date": "2020-07-21 11:00",
+        "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "1500",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Bieganie powinno mieć jakiś sens. W tym przypadku jest przepoteżny. Każdy uczestnik, któy przekroczy linię mety zasili konto fundacji"
+        "description": "Bieganie powinno mieć jakiś sens. W tym przypadku jest przepotężny. Każdy uczestnik, któy przekroczy linię mety zasili konto fundacji."
     },
     {
         "id":"6",
-        "name": "Bieg Słonego Paluszka",
+        "name": "Bieg Paluszka",
         "place": "Sopot",
         "address": "ul. Paluszkowa 666",
         "date": "2020-03-15 12:00",
+        "distance": "5",
         "run": "Przełajowy",
         "numOfrunners": "500",
         "charge": "",
-        "distance": "5",
         "image": "https://via.placeholder.com/200",
         "description": "Jedyny, oryginalny, niepowtarzalny, wyjątkowy. Kto z nas nie kocha paluszków? Nie zastanawiaj się ani chwili dłużej!"
     },
@@ -82,25 +82,25 @@
         "place": "Warszawa",
         "address": "ul. Wiejska 100",
         "date": "2020-05-25 11:30",
+        "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "10000",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Największe tego typu wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy"
+        "description": "Największe tego typu wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
     {
         "id":"8",
-        "name": "Bieg Paprykarza Szczecińskiego",
+        "name": "Bieg Paprykarza",
         "place": "Sopot",
         "address": "ul. Paprykarza 333",
         "date": "2020-04-20 10:00",
+        "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "20000",
         "charge": "",
-        "distance": "5",
         "image": "https://via.placeholder.com/200",
-        "description": "Ku chwale papryki! Dla każdego uczestnika, który ukończy bieg, podarunek - jedyny, prawdziwy Paprykarz Szczecziński"
+        "description": "Ku chwale paprykarza! Dla każdego uczestnika, który ukończy bieg, podarunek - jedyny, prawdziwy Paprykarz Szczecziński."
     },
     {
         "id":"9",
@@ -108,25 +108,25 @@
         "place": "Kraków",
         "address": "ul. Smoka Wawelskiego 69",
         "date": "2020-08-15 14:00",
+        "distance": "21",
         "run": "Uliczny",
         "numOfrunners": "4000",
         "charge": "",
-        "distance": "21",
         "image": "https://via.placeholder.com/200",
-        "description": "Jedyny słuszny patron biegania. Ognisty bieg, w jednym z gorętszych miesiąców. Zapraszamy serdecznie"
+        "description": "Jedyny słuszny patron biegania. Ognisty bieg, w jednym z gorętszych miesiąców. Zapraszamy serdecznie."
     },
     {
         "id":"10",
-        "name": "Bieg Stolicy vol 2",
+        "name": "Bieg Stolicy2",
         "place": "Warszawa",
         "address": "ul. Wiejska 100",
         "date": "2020-07-25 11:30",
+        "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "10000",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Druga edycja największego wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy"
+        "description": "Druga edycja największego wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
     {
         "id":"11",
@@ -134,10 +134,10 @@
         "place": "Białystok",
         "address": "ul. Zielna 1, Plan Zielny",
         "date": "2020-09-22 12:00",
+        "distance": "42",
         "run": "Uliczny",
         "numOfrunners": "1500",
         "charge": "",
-        "distance": "42",
         "image": "https://via.placeholder.com/200",
         "description": "Największy event na Podlasiu w 2020 roku. Lubisz biegać? Obecność obowiązkowa"
     },
@@ -147,12 +147,12 @@
         "place": "Olsztyn",
         "address": "ul. Jeziorna 13",
         "date": "2020-05-11 13:00",
+        "distance": "5",
         "run": "Przełajowy",
         "numOfrunners": "700",
         "charge": "",
-        "distance": "5",
         "image": "https://via.placeholder.com/200",
-        "description": "Połącz bieganie z pięknymi widokami.   "
+        "description": "Połącz bieganie z pięknymi widokami."
     },
     {
         "id":"13",
@@ -160,12 +160,12 @@
         "place": "Ełk",
         "address": "ul. Leśna 5",
         "date": "2020-06-13 12:00",
+        "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "3500",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Even organizowany przez Urząd miasta. Zapraszamy rodziny z dziećmi. Zapewniamy wiele atrakcji dla wszystkich."
+        "description": "Event organizowany przez Urząd miasta. Zapraszamy rodziny z dziećmi. Zapewniamy wiele atrakcji dla wszystkich."
     },
     {
         "id":"14",
@@ -173,25 +173,25 @@
         "place": "Banino",
         "address": "ul. Wioślarza 15",
         "date": "2020-08-02 11:00",
+        "distance": "10",
         "run": "Przełajowy",
         "numOfrunners": "800",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Jedyny taki bieg w Polsce. 10km pośród pola rzepaku, w iście wiejskim klimacie"
+        "description": "Jedyny taki bieg w Polsce. 10km pośród pola rzepaku, w iście wiejskim klimacie."
     },
     {
         "id":"15",
-        "name": "Bieg Tczewski vol 2",
+        "name": "Bieg Tczewski2",
         "place": "Tczew",
         "address": "ul. Tczewska 1",
         "date": "2020-05-16 8:00",
+        "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "1000",
         "charge": "",
-        "distance": "5",
         "image": "https://via.placeholder.com/200",
-        "description": "Druga edycja najlepszego biegu na Kociewiu. Wspaniała atmosfera. Zapraszamy biegaczy wraz z rodzinami"
+        "description": "Druga edycja najlepszego biegu na Kociewiu. Wspaniała atmosfera. Zapraszamy biegaczy wraz z rodzinami."
     },
     {
         "id":"16",
@@ -199,12 +199,12 @@
         "place": "Śliwiny",
         "address": "ul. Monte Casino 13",
         "date": "2020-12-18 13:00",
+        "distance": "10",
         "run": "Przełajowy",
         "numOfrunners": "500",
         "charge": "",
-        "distance": "10",
         "image": "https://via.placeholder.com/200",
-        "description": "Klasyczna Śliwa. Nie będzie lekko. Najbardziej przełajowy bieg w Polsce"
+        "description": "Klasyczna Śliwa. Nie będzie lekko. Najbardziej przełajowy bieg w Polsce."
     },
     {
         "id":"17",
@@ -212,10 +212,10 @@
         "place": "Warszawa",
         "address": "ul. Zamojskich 13",
         "date": "2020-08-11 9:00",
+        "distance": "25",
         "run": "Uliczny",
         "numOfrunners": "5000",
         "charge": "",
-        "distance": "25",
         "image": "https://via.placeholder.com/200",
         "description": "Coroczny event ku czci naszych kochanych nauczycieli!"
     }
