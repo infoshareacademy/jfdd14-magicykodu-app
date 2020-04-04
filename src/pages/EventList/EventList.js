@@ -6,8 +6,6 @@ import allEvents from "../../List.json";
 
 const IMEMS_PER_PAGE = 10;
 
-// import List from '../../List.json'
-
 class EventList extends Component {
   state = {
     activePage: 1,
@@ -24,13 +22,16 @@ class EventList extends Component {
   handleFilterRun = (filterRun) => this.setState({ filterRun: filterRun });
 
   componentDidMount() {
-    const list = JSON.parse(localStorage.getItem("eventList"));
+    const list =
+      localStorage.getItem("eventList") === null
+        ? localStorage.setItem("eventList", JSON.stringify(this.state.list))
+        : JSON.parse(localStorage.getItem("eventList"));
     list && this.setState({ list });
   }
-  
+
   render() {
     const { filterPlace, filterDistance, filterRun } = this.state;
-    const eventsFiltered = allEvents;
+    const eventsFiltered = this.state.list;
     const totalPages = Math.ceil(eventsFiltered.length / IMEMS_PER_PAGE);
     const eventsOnActivePage = eventsFiltered
       .filter((el) => {

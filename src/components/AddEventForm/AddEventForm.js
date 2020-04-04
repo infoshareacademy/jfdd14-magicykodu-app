@@ -11,19 +11,19 @@ import "./AddEventForm.css";
 
 const typeOfRun = [
   { key: "u", label: "Uliczny", value: "Uliczny" },
-  { key: "p", label: "Przełajowy", value: "Przełajowy" }
+  { key: "p", label: "Przełajowy", value: "Przełajowy" },
 ];
 
 const typeOfdistance = [
   { key: "5", label: "5", value: "5" },
   { key: "10", label: "10", value: "10" },
   { key: "half-m", label: "21", value: "21" },
-  { key: "m", label: "42", value: "42" }
+  { key: "m", label: "42", value: "42" },
 ];
 
 const btnStyle = {
   backgroundColor: "#28bb76",
-  color: "#fff"
+  color: "#fff",
 };
 
 export default class AddEventForm extends Component {
@@ -39,23 +39,23 @@ export default class AddEventForm extends Component {
     charge: "",
     img: "",
     description: "",
-    confirm: false
+    confirm: false,
   };
 
-  handleClick = props => {
+  handleClick = (props) => {
     this.props.handleClick();
     alert("Gratulacje! Dodałeś wydarzenie!");
   };
 
-  handleChangeDistance = distance => {
+  handleChangeDistance = (distance) => {
     this.setState({ distance: distance });
   };
 
-  handleChangeRun = run => {
+  handleChangeRun = (run) => {
     this.setState({ run: run });
   };
 
-  handleChangeDate = date => {
+  handleChangeDate = (date) => {
     this.setState({ date: date });
   };
 
@@ -72,12 +72,12 @@ export default class AddEventForm extends Component {
   };
 
   saveToLocaleStorage = () => {
-    const newItem = { ...this.state }
-    newItem.distance = this.state.distance.value
-    const newItem2 = { ...this.state }
-    newItem2.run = this.state.run.value
-    list.push(this.state)
-    localStorage.setItem("eventList", JSON.stringify(list))
+    const newItem = { ...this.state };
+    newItem.distance = this.state.distance.value;
+    const newItem2 = { ...this.state };
+    newItem2.run = this.state.run.value;
+    list.push(this.state);
+    localStorage.setItem("eventList", JSON.stringify(list));
   };
 
   resetForm = () => {
@@ -92,11 +92,11 @@ export default class AddEventForm extends Component {
       charge: "",
       img: "",
       description: "",
-      confirm: false
+      confirm: false,
     });
   };
 
-  onFormSubmit = e => {
+  onFormSubmit = (e) => {
     e.preventDefault();
     this.saveToLocaleStorage();
     this.resetForm();
@@ -114,7 +114,7 @@ export default class AddEventForm extends Component {
       charge,
       img,
       description,
-      confirm
+      confirm,
     } = this.state;
 
     const addEventBtn =

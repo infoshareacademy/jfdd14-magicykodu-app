@@ -5,6 +5,7 @@ import { Grid } from "semantic-ui-react";
 import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
 
 const List = ({ activePage, onPageChange, totalPages, events }) => {
+  console.log(events);
   const items = events.map((el) => {
     return (
       <div className="divHeight" key={el.name}>
@@ -17,7 +18,7 @@ const List = ({ activePage, onPageChange, totalPages, events }) => {
               <span className="cinema">Miasto: {el.place}</span>
             </Item.Meta>
             <Item.Meta>
-              <span className="cinema">Data: {el.date}</span>
+              <span className="cinema">Data: {" " + el.date}</span>
             </Item.Meta>
             <Item.Meta>
               <span className="cinema">Dystans: {el.distance} km</span>
