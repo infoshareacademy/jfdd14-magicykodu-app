@@ -21,6 +21,11 @@ const typeOfdistance = [
   { key: "m", label: "42", value: "42" }
 ];
 
+const btnStyle = {
+  backgroundColor: "#28bb76",
+  color: "#fff"
+};
+
 export default class AddEventForm extends Component {
   state = {
     id: uuid(),
@@ -108,16 +113,24 @@ export default class AddEventForm extends Component {
       confirm
     } = this.state;
 
-    const addEventBtn = confirm ? (
-      <Button type="submit" color="grey" onClick={this.handleClick}>
-        Dodaj wydarzenie
-      </Button>
-    ) : (
-      <Popup
-        content="Akceptacja regulaminu jest konieczna"
-        trigger={<Button color="grey">Dodaj wydarzenie</Button>}
-      />
-    );
+    const addEventBtn =
+      name !== "" &&
+      place !== "" &&
+      (address !== "") & (date !== "") &&
+      distance !== "" &&
+      run !== "" &&
+      numOfrunners !== "" &&
+      description !== "" &&
+      confirm ? (
+        <Button type="submit" style={btnStyle} onClick={this.handleClick}>
+          Dodaj wydarzenie
+        </Button>
+      ) : (
+        <Popup
+          content="Akceptacja regulaminu jest konieczna"
+          trigger={<Button color="grey">Dodaj wydarzenie</Button>}
+        />
+      );
 
     return (
       <div className="form__container">
