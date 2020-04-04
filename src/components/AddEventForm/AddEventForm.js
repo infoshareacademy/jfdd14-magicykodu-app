@@ -15,10 +15,10 @@ const typeOfRun = [
 ];
 
 const typeOfdistance = [
-  { key: "5", label: "5 km", value: "5" },
-  { key: "10", label: "10 km", value: "10" },
-  { key: "half-m", label: "Półmaraton", value: "Półmaraton" },
-  { key: "m", label: "Maraton", value: "Maraton" }
+  { key: "5", label: "5", value: "5" },
+  { key: "10", label: "10", value: "10" },
+  { key: "half-m", label: "21", value: "21" },
+  { key: "m", label: "42", value: "42" }
 ];
 
 export default class AddEventForm extends Component {
