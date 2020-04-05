@@ -74,9 +74,8 @@ export default class AddEventForm extends Component {
   saveToLocaleStorage = () => {
     const newItem = { ...this.state };
     newItem.distance = this.state.distance.value;
-    const newItem2 = { ...this.state };
-    newItem2.run = this.state.run.value;
-    list.push(this.state);
+    newItem.run = this.state.run.value;
+    list.push(newItem);
     localStorage.setItem("eventList", JSON.stringify(list));
   };
 
