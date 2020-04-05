@@ -6,7 +6,6 @@ import allEvents from "../../List.json";
 import './EventListStyle.css'
 
 const IMEMS_PER_PAGE = 10;
-// import List from '../../List.json'
 class EventList extends Component {
   state = {
     activePage: 1,
@@ -15,20 +14,26 @@ class EventList extends Component {
     filterDistance: "0",
     list: allEvents,
   };
+
   handleFilterPlace = (filterPlace) =>
     this.setState({ filterPlace: filterPlace });
   handleFilterDistance = (filterDistance) =>
     this.setState({ filterDistance: filterDistance });
   handleFilterRun = (filterRun) => this.setState({ filterRun: filterRun });
+
   componentDidMount() {
-    const list = JSON.parse(localStorage.getItem("eventList"));
+    const list =
+      localStorage.getItem("eventList") === null
+        ? localStorage.setItem("eventList", JSON.stringify(this.state.list))
+        : JSON.parse(localStorage.getItem("eventList"));
     list && this.setState({ list });
   }
+
   render() {
     const { filterPlace, filterDistance, filterRun } = this.state;
-    const evetsFiltered = allEvents;
-    const totalPages = Math.ceil(evetsFiltered.length / IMEMS_PER_PAGE);
-    const eventsOnActivePage = evetsFiltered
+    const eventsFiltered = this.state.list;
+    const totalPages = Math.ceil(eventsFiltered.length / IMEMS_PER_PAGE);
+    const eventsOnActivePage = eventsFiltered
       .filter((el) => {
         const filterPlaceCategory =
           el.place.toLowerCase().indexOf(filterPlace.toLowerCase()) !== -1 ||
@@ -44,6 +49,7 @@ class EventList extends Component {
         (this.state.activePage - 1) * IMEMS_PER_PAGE,
         this.state.activePage * IMEMS_PER_PAGE
       );
+
     return (
       <div>
         <Search

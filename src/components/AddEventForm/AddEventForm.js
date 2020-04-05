@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import CreatableSelect from "react-select/creatable";
+import Select from "react-select";
 import { Button, Form, Header, Input, Popup } from "semantic-ui-react";
 import { uuid } from "uuidv4";
 
+import EventAddedModal from "../EventAddedModal/EventAddedModal";
 import list from "../../List.json";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -11,19 +13,19 @@ import "./AddEventForm.css";
 
 const typeOfRun = [
   { key: "u", label: "Uliczny", value: "Uliczny" },
-  { key: "p", label: "Przełajowy", value: "Przełajowy" }
+  { key: "p", label: "Przełajowy", value: "Przełajowy" },
 ];
 
 const typeOfdistance = [
   { key: "5", label: "5", value: "5" },
   { key: "10", label: "10", value: "10" },
   { key: "half-m", label: "21", value: "21" },
-  { key: "m", label: "42", value: "42" }
+  { key: "m", label: "42", value: "42" },
 ];
 
 const btnStyle = {
   backgroundColor: "#28bb76",
-  color: "#fff"
+  color: "#fff",
 };
 
 export default class AddEventForm extends Component {
@@ -39,23 +41,27 @@ export default class AddEventForm extends Component {
     charge: "",
     img: "",
     description: "",
-    confirm: false
+    confirm: false,
+    show: false,
   };
 
-  handleClick = props => {
-    this.props.handleClick();
-    alert("Gratulacje! Dodałeś wydarzenie!");
+  showModal = () => {
+    this.setState({ show: true });
   };
 
-  handleChangeDistance = distance => {
-    this.setState({ distance: distance.value });
+  hideModal = () => {
+    this.setState({ show: false });
   };
 
-  handleChangeRun = run => {
-    this.setState({ run: run.value });
+  handleChangeDistance = (distance) => {
+    this.setState({ distance: distance });
   };
 
-  handleChangeDate = date => {
+  handleChangeRun = (run) => {
+    this.setState({ run: run });
+  };
+
+  handleChangeDate = (date) => {
     this.setState({ date: date });
   };
 
@@ -72,7 +78,10 @@ export default class AddEventForm extends Component {
   };
 
   saveToLocaleStorage = () => {
-    list.push(this.state);
+    const newItem = { ...this.state };
+    newItem.distance = this.state.distance.value;
+    newItem.run = this.state.run.value;
+    list.push(newItem);
     localStorage.setItem("eventList", JSON.stringify(list));
   };
 
@@ -88,11 +97,11 @@ export default class AddEventForm extends Component {
       charge: "",
       img: "",
       description: "",
-      confirm: false
+      confirm: false,
     });
   };
 
-  onFormSubmit = e => {
+  onFormSubmit = (e) => {
     e.preventDefault();
     this.saveToLocaleStorage();
     this.resetForm();
@@ -110,7 +119,7 @@ export default class AddEventForm extends Component {
       charge,
       img,
       description,
-      confirm
+      confirm,
     } = this.state;
 
     const addEventBtn =
@@ -122,7 +131,7 @@ export default class AddEventForm extends Component {
       numOfrunners !== "" &&
       description !== "" &&
       confirm ? (
-        <Button type="submit" style={btnStyle} onClick={this.handleClick}>
+        <Button type="submit" style={btnStyle} onClick={this.showModal}>
           Dodaj wydarzenie
         </Button>
       ) : (
@@ -134,6 +143,10 @@ export default class AddEventForm extends Component {
 
     return (
       <div className="form__container">
+        <EventAddedModal
+          show={this.state.show}
+          handleClose={this.hideModal}
+        ></EventAddedModal>
         <Header>Stwórz własne wydarzenie</Header>
         <hr></hr>
         <br></br>
@@ -185,8 +198,7 @@ export default class AddEventForm extends Component {
           </Form.Field>
           <Form.Field required>
             <label>Rodzaj biegu</label>
-            <CreatableSelect
-              isClearable
+            <Select
               value={run}
               onChange={this.handleChangeRun}
               options={typeOfRun}
@@ -199,6 +211,7 @@ export default class AddEventForm extends Component {
             onChange={this.handleChangeText}
             label="Liczba uczestników"
             type="number"
+            min="1"
             required
           />
           <Form.Field>
@@ -211,6 +224,7 @@ export default class AddEventForm extends Component {
                 label={{ basic: true, content: "PLN" }}
                 labelPosition="right"
                 type="number"
+                min="0"
               />
             </label>
           </Form.Field>
