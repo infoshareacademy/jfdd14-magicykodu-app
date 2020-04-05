@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import CreatableSelect from "react-select/creatable";
+import Select from "react-select";
 import { Button, Form, Header, Input, Popup } from "semantic-ui-react";
 import { uuid } from "uuidv4";
 
+import EventAddedModal from "../EventAddedModal/EventAddedModal";
 import list from "../../List.json";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -40,11 +42,15 @@ export default class AddEventForm extends Component {
     img: "",
     description: "",
     confirm: false,
+    show: false,
   };
 
-  handleClick = (props) => {
-    this.props.handleClick();
-    alert("Gratulacje! Dodałeś wydarzenie!");
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
   };
 
   handleChangeDistance = (distance) => {
@@ -125,7 +131,7 @@ export default class AddEventForm extends Component {
       numOfrunners !== "" &&
       description !== "" &&
       confirm ? (
-        <Button type="submit" style={btnStyle} onClick={this.handleClick}>
+        <Button type="submit" style={btnStyle} onClick={this.showModal}>
           Dodaj wydarzenie
         </Button>
       ) : (
@@ -137,6 +143,10 @@ export default class AddEventForm extends Component {
 
     return (
       <div className="form__container">
+        <EventAddedModal
+          show={this.state.show}
+          handleClose={this.hideModal}
+        ></EventAddedModal>
         <Header>Stwórz własne wydarzenie</Header>
         <hr></hr>
         <br></br>
@@ -188,8 +198,7 @@ export default class AddEventForm extends Component {
           </Form.Field>
           <Form.Field required>
             <label>Rodzaj biegu</label>
-            <CreatableSelect
-              isClearable
+            <Select
               value={run}
               onChange={this.handleChangeRun}
               options={typeOfRun}

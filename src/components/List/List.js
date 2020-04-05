@@ -5,7 +5,6 @@ import { Grid, Container } from "semantic-ui-react";
 import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
 
 const List = ({ activePage, onPageChange, totalPages, events }) => {
-  console.log(events);
   const items = events.map((el) => {
     return (
       <Container className="containerList" key={el.name}>
