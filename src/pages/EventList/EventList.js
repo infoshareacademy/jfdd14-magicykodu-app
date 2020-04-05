@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Search from "../../components/Search/Search";
 import List from "../../components/List/List";
-
 import allEvents from "../../List.json";
 
-const IMEMS_PER_PAGE = 10;
+import './EventListStyle.css'
 
+const IMEMS_PER_PAGE = 10;
 class EventList extends Component {
   state = {
     activePage: 1,
@@ -70,5 +70,4 @@ class EventList extends Component {
     );
   }
 }
-
 export default EventList;

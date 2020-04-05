@@ -1,0 +1,49 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    text-align: left;
+}
+.containerList{
+  display: flex !important;
+  margin-top:70px !important;
+  width: 50% !important;
+}
+.ui.grid>.column:only-child{
+  padding: 0px 0px 10px 5px !important;
+}
+.AddImageAndList{
+  display: flex;
+  margin: 0 auto;
+}
+.paginationStyle{
+  display: flex !important;
+  margin: 0 auto !important;
+}
+button.ui.primary.left.floated.button.btn{
+  background-color: rgb(40, 187, 118);
+}
+.colourText{
+  color: rgb(40, 187, 118);
+}
+div.AddImageAndList{
+  box-shadow: 1px 1px 5px 1px #999999;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 70px;
+}
+img{
+  max-width: 200px;
+  max-height: 200px;
+}
+
+@media (max-width: 1050px) {
+  div.AddImageAndList{
+    padding: 30px !important;
+  }
+}
+@media (max-width: 880px) {
+  .AddImageAndList{
+    display: grid;
+  }
+}
