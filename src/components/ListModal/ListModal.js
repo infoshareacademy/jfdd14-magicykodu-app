@@ -1,29 +1,32 @@
-import React from 'react'
-import { Button, Header, Image, Modal } from 'semantic-ui-react'
-import allList from '../../List.json'
+import React from "react";
+import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
+import { Button, Header, Image, Modal } from "semantic-ui-react";
 
-import './ListModal.css'
+const btnStyle = {
+  backgroundColor: "#28bb76",
+  color: "#fff",
+};
 
-
-
-const ListModal = function(props) {
-   
-return (
-  <Modal trigger={<Button> Więcej informacji!</Button>}>
-    <Modal.Header>${props.name}</Modal.Header>
-    <Modal.Content image>
-      <Image wrapped size='medium' src={props.image} />
-      <Modal.Description>
-        <Header>{props.adress}</Header>
-        <p>{props.date}</p>
-        <p>{props.distance}</p>
-        <p>{props.run}</p>
-        <p>{props.numOfrunners}</p>
-        <p>{props.description}</p>
-      </Modal.Description>
-    </Modal.Content>
-  </Modal>
-);
-        
-}
-export default ListModal
+const ListModal = function ({ element }) {
+  return (
+    <Modal trigger={<Button style={btnStyle}> Więcej informacji!</Button>}>
+      <Modal.Header>{element.name}</Modal.Header>
+      <Modal.Content image>
+        <Image
+          wrapped
+          size="medium"
+          src={element.image || defaultPlaceholder}
+        />
+        <Modal.Description>
+          <Header>{element.adress}</Header>
+          <p>{element.date}</p>
+          <p>{element.distance} km</p>
+          <p>{element.run}</p>
+          <p>{element.numOfrunners}</p>
+          <p>{element.description}</p>
+        </Modal.Description>
+      </Modal.Content>
+    </Modal>
+  );
+};
+export default ListModal;

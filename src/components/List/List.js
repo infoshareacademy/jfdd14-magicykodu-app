@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Icon, Item } from "semantic-ui-react";
+import { Item } from "semantic-ui-react";
 import PaginationExampleControlled from "../Pagination/Pagination";
 import { Grid, Container } from "semantic-ui-react";
 import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
 import ListModal from '../ListModal/ListModal'
 
 const List = ({ activePage, onPageChange, totalPages, events }) => {
-  const items = events.map((el,) => {
+  const items = events.map((el) => {
     
     return (
       <Container className="containerList" key={el.name}>
@@ -36,7 +36,7 @@ const List = ({ activePage, onPageChange, totalPages, events }) => {
 
                 <Grid.Row>
                   <Item.Extra>
-                    <ListModal />
+                    <ListModal element={el}/>
                     <br />
                   </Item.Extra>
                 </Grid.Row>
