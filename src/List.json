@@ -33,7 +33,7 @@
         "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "2000",
-        "charge": "",
+        "charge": "1",
         "image": "https://picsum.photos/202",
         "description": "Bieg rodzinny w samym sercu Trójmiasta. Przyjdź z żoną, mężem, dziećmi, rodzicami, psem czy chomikiem i zdobądź medal Spokockiego Biegacza. Szczegóły na stronie www.bieg2020/bieg-sopocki.pl!"
     },
@@ -46,7 +46,7 @@
         "distance": "21",
         "run": "Przełajowy",
         "numOfrunners": "5000",
-        "charge": "",
+        "charge": "10",
         "image": "https://picsum.photos/203",
         "description": "Sport z sercu kaszub. Idealne wydarzenia, dla wszystkich kochających bieganie oraz przyrodę."
     },
@@ -59,7 +59,7 @@
         "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "1500",
-        "charge": "",
+        "charge": "11",
         "image": "https://picsum.photos/204",
         "description": "Bieganie powinno mieć jakiś sens. W tym przypadku jest przepotężny. Każdy uczestnik, któy przekroczy linię mety zasili konto fundacji."
     },
@@ -72,7 +72,7 @@
         "distance": "5",
         "run": "Przełajowy",
         "numOfrunners": "500",
-        "charge": "",
+        "charge": "10",
         "image": "https://picsum.photos/205",
         "description": "Jedyny, oryginalny, niepowtarzalny, wyjątkowy. Kto z nas nie kocha paluszków? Nie zastanawiaj się ani chwili dłużej!"
     },
@@ -85,7 +85,7 @@
         "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "10000",
-        "charge": "",
+        "charge": "8",
         "image": "https://picsum.photos/206",
         "description": "Największe tego typu wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
@@ -98,7 +98,7 @@
         "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "20000",
-        "charge": "",
+        "charge": "4",
         "image": "https://picsum.photos/207",
         "description": "Ku chwale paprykarza! Dla każdego uczestnika, który ukończy bieg, podarunek - jedyny, prawdziwy Paprykarz Szczecziński."
     },
@@ -111,7 +111,7 @@
         "distance": "21",
         "run": "Uliczny",
         "numOfrunners": "4000",
-        "charge": "",
+        "charge": "6",
         "image": "https://picsum.photos/208",
         "description": "Jedyny słuszny patron biegania. Ognisty bieg, w jednym z gorętszych miesiąców. Zapraszamy serdecznie."
     },
@@ -124,7 +124,7 @@
         "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "10000",
-        "charge": "",
+        "charge": "5",
         "image": "https://picsum.photos/209",
         "description": "Druga edycja największego wydarzenia w Polsce. 10000 biegaczy pobiegnie, żeby oddać cześć naszej pięknej stolicy."
     },
@@ -137,7 +137,7 @@
         "distance": "42",
         "run": "Uliczny",
         "numOfrunners": "1500",
-        "charge": "",
+        "charge": "8",
         "image": "https://picsum.photos/210",
         "description": "Największy event na Podlasiu w 2020 roku. Lubisz biegać? Obecność obowiązkowa"
     },
@@ -150,7 +150,7 @@
         "distance": "5",
         "run": "Przełajowy",
         "numOfrunners": "700",
-        "charge": "",
+        "charge": "4",
         "image": "https://picsum.photos/211",
         "description": "Połącz bieganie z pięknymi widokami."
     },
@@ -163,7 +163,7 @@
         "distance": "10",
         "run": "Uliczny",
         "numOfrunners": "3500",
-        "charge": "",
+        "charge": "5",
         "image": "https://picsum.photos/212",
         "description": "Event organizowany przez Urząd miasta. Zapraszamy rodziny z dziećmi. Zapewniamy wiele atrakcji dla wszystkich."
     },
@@ -176,7 +176,7 @@
         "distance": "10",
         "run": "Przełajowy",
         "numOfrunners": "800",
-        "charge": "",
+        "charge": "3",
         "image": "https://picsum.photos/213",
         "description": "Jedyny taki bieg w Polsce. 10km pośród pola rzepaku, w iście wiejskim klimacie."
     },
@@ -189,7 +189,7 @@
         "distance": "5",
         "run": "Uliczny",
         "numOfrunners": "1000",
-        "charge": "",
+        "charge": "12",
         "image": "https://picsum.photos/214",
         "description": "Druga edycja najlepszego biegu na Kociewiu. Wspaniała atmosfera. Zapraszamy biegaczy wraz z rodzinami."
     },
@@ -202,7 +202,7 @@
         "distance": "10",
         "run": "Przełajowy",
         "numOfrunners": "500",
-        "charge": "",
+        "charge": "15",
         "image": "https://picsum.photos/215",
         "description": "Klasyczna Śliwa. Nie będzie lekko. Najbardziej przełajowy bieg w Polsce."
     },
@@ -215,7 +215,7 @@
         "distance": "25",
         "run": "Uliczny",
         "numOfrunners": "5000",
-        "charge": "",
+        "charge": "5",
         "image": "https://picsum.photos/216",
         "description": "Coroczny event ku czci naszych kochanych nauczycieli!"
     }
