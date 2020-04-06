@@ -1,6 +1,6 @@
 import React from "react";
 import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
-import { Button, Header, Image, Modal } from "semantic-ui-react";
+import { Button, Header, Icon, Image, Modal} from "semantic-ui-react";
 import './ListModal.css'
 
 const ListModal = function ({ element }) {
@@ -14,14 +14,18 @@ const ListModal = function ({ element }) {
           src={element.image || defaultPlaceholder}
         />
         <Modal.Description>
-        <Header>Adres:{' '}{element.address}</Header>
-          <p>Data:{' '}{element.date}</p>
-          <p>Dystans:{' '}{element.distance} km</p>
-          <p>Rodzaj biegu:{' '}{element.run}</p>
-          <p>Liczba uczestników:{' '}{element.numOfrunners}</p>
-          <p>Opis:{' '}{element.description}</p>
+        <Header>Miasto: {element.place}</Header>
+          <p>Adres: {element.address}</p>
+          <p>Data: {element.date}</p>
+          <p>Dystans: {element.distance} km</p>
+          <p>Rodzaj biegu: {element.run}</p>
+          <p>Liczba uczestników: {element.numOfrunners}</p>
+          <p>Opłata: {element.charge} PLN</p>
+          <p>Opis: {element.description}</p>
+          
         </Modal.Description>
-      </Modal.Content>
+      </Modal.Content> 
+    
     </Modal>
   );
 };

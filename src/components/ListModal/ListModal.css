@@ -15,12 +15,12 @@
 
 @media (max-width: 880px) {
     .containerModal{
-    max-width: 300px !important;
-    max-height: 300px !important;
+    max-width: 270px !important;
+    max-height: 600px !important;
     
   }
   img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 120px;
+    max-height: 120px;
   }
 }
