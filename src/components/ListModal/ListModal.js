@@ -1,29 +1,25 @@
 import React from "react";
 import defaultPlaceholder from "../DefaultPlaceholder/defaultPlaceholder.png";
 import { Button, Header, Image, Modal } from "semantic-ui-react";
-
-const btnStyle = {
-  backgroundColor: "#28bb76",
-  color: "#fff",
-};
+import './ListModal.css'
 
 const ListModal = function ({ element }) {
   return (
-    <Modal trigger={<Button style={btnStyle}> Więcej informacji!</Button>}>
+    <Modal className="containerModal" trigger={<Button className="btnModal"> Więcej informacji!</Button>}>
       <Modal.Header>{element.name}</Modal.Header>
       <Modal.Content image>
         <Image
           wrapped
-          size="medium"
+          size="large"
           src={element.image || defaultPlaceholder}
         />
         <Modal.Description>
-          <Header>{element.adress}</Header>
-          <p>{element.date}</p>
-          <p>{element.distance} km</p>
-          <p>{element.run}</p>
-          <p>{element.numOfrunners}</p>
-          <p>{element.description}</p>
+        <Header>Adres:{' '}{element.address}</Header>
+          <p>Data:{' '}{element.date}</p>
+          <p>Dystans:{' '}{element.distance} km</p>
+          <p>Rodzaj biegu:{' '}{element.run}</p>
+          <p>Liczba uczestników:{' '}{element.numOfrunners}</p>
+          <p>Opis:{' '}{element.description}</p>
         </Modal.Description>
       </Modal.Content>
     </Modal>

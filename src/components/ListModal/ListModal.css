@@ -1,0 +1,26 @@
+.btnModal{
+    background-color: #28bb76 !important;
+    color: #fff !important;
+}
+
+.containerModal{
+    
+    max-width: 500px !important;
+    max-height: 500px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    
+}
+
+@media (max-width: 880px) {
+    .containerModal{
+    max-width: 300px !important;
+    max-height: 300px !important;
+    
+  }
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
