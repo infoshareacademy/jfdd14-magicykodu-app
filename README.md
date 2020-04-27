@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Planner 4 Runner
+### Made by [magicyKodu](#developers)
 
-## Available Scripts
+Planner 4 Runner is a web application designed for professional and amateur runners in Poland. Users can sign up and add their own event in which other users can participate. 
+You can check it out [here](http://app.magicykodu.jfdd14.is-academy.pl/).
 
-In the project directory, you can run:
+[![Plunner4Runner demo](https://i.postimg.cc/5yCwzPcs/Screenshot-from-2020-04-27-11-07-42.png)](http://app.magicykodu.jfdd14.is-academy.pl/)
 
-### `npm start`
+_______________________
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Table of content
+============
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [Features](#features)
+- [Technology stack](#technology-stack)
+- [Landing page](#landing-page)
+- [Game](#game)
+- [How to start](#how-to-start)
+- [Developers](#developers)
+- [Acknowledgements](#acknowledgements)
 
-### `npm test`
+Features
+============
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- search running events by city, type and length of distance
+- add your own event 
+- share link on facebook
 
-### `npm run build`
+Technology stack
+============
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React](https://github.com/facebook/react)
+- [Semantic-Ui-React](https://github.com/Semantic-Org/Semantic-UI-React)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Landing page
+============
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Fully responsive [landing page](http://www.magicykodu.jfdd14.is-academy.pl/) informing about upcomming app.
 
-### `npm run eject`
+[![Plunner4Runner landing page](https://i.postimg.cc/PrBdK2gm/Screenshot-from-2020-04-27-13-29-23.png)](http://www.magicykodu.jfdd14.is-academy.pl/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Game
+============
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mini [game](http://www.magicykodu.jfdd14.is-academy.pl/Runner%20Game/game.html) for application subscribers.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[![Plunner4Runner game](https://i.postimg.cc/jq7Vt9Zm/Screenshot-from-2020-04-27-13-58-55.png)](http://www.magicykodu.jfdd14.is-academy.pl/Runner%20Game/game.html)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+How to start
+============
 
-## Learn More
+1. Clone the repo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - SSH
+```
+git@github.com:infoshareacademy/jfdd14-magicykodu-app.git
+```
+- HTTPS
+```
+https://github.com/infoshareacademy/jfdd14-magicykodu-app.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install all necessary packages you need:
 
-### Code Splitting
+`npm install`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+3. Start project:
 
-### Analyzing the Bundle Size
+`npm start`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+4. Open http://localhost:3000 to view it in the browser.
 
-### Making a Progressive Web App
+Developers
+============
+### magicyKodu team:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+|                  | Github                                         | LinkedIn
+------------------ | ---------------------------------------------- | -------------
+Dawid Domański | [Davioli91](https://github.com/Davioli91) | [in/dawid-domański](https://www.linkedin.com/in/dawid-doma%C5%84ski-6235b4132/)
+Karolina Szlenk    | [karolina-szlenk](https://github.com/karolina-szlenk) | [in/karolina-szlenk](https://www.linkedin.com/in/karolina-szlenk/)
 
-### Advanced Configuration
+Acknowledgements
+============
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [React](https://github.com/facebook/react)
+- [React-Router](https://github.com/ReactTraining/react-router)
+- [Create-React-App](https://github.com/facebook/create-react-app)
+- [Semantic-Ui-React](https://github.com/Semantic-Org/Semantic-UI-React)
+- [Recharts](https://github.com/recharts/recharts)
+- [React-Share](https://github.com/nygardk/react-share)
+- [Prettier](https://github.com/prettier/prettier)
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+_______________________
